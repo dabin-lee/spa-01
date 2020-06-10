@@ -6,15 +6,15 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div class="body__wrapper">
     <header>
         <div class="inner">
-            <div class="header__logo">
+            <h1 class="header__logo">
                 <a href="#">header_logo</a>
-            </div>
+            </h1>
             <nav>
                 <ul>
                     <li><a href="">HOME</a></li>
@@ -35,7 +35,7 @@
                 <p>Together creeping heaven upon third dominion be upon won't darkness rule<br>behold it createdgood saw after she'd Our set living.</p>
             </div>
             <div class="banner__btn">
-                <button type="submit" class="btn btn--square">RESERVED NOW</button>
+                <button type="submit" class="btn__primary btn--submit">RESERVED NOW</button>
                 <div class="play">
                     <a href="#" class="btn--play"></a>
                     <span>Watch our story</span>
@@ -51,16 +51,16 @@
                 <h2>Come and you will be Inspired!</h2>
                 <p>It’s the end of summer the sweltering heat makes human sweat in the night and makes the plants and trees wilt even in the moonlit nights. The eastern wind breeze brings an eerie feeling, that the monsoon clouds are soon coming, there is a strange silence in the ears, the skygets darker and darker</p>
             </div>
-            <button type="button" class="btn">READ MORE</button>
+            <button type="button" class="btn__primary">READ MORE</button>
         </div>
     </section><!-- //About -->
 
     <section class="section--feature">
         <ul class="feature__cont">
-            <li></li>
             <li><span>Body Treatment</span></li>
-            <li></li>
-            <li></li>
+            <li><span>Body Treatment</span></li>
+            <li><span>Body Treatment</span></li>
+            <li><span>Body Treatment</span></li>
         </ul>
     </section><!-- //Feature -->
 
@@ -74,28 +74,28 @@
                 <ul>
                     <li>
                         <img src="" alt="">
-                        <h3>Massage Therapy</h3>
+                        <strong>Massage Therapy</strong>
                         <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
-                        <button type="button" class="btn btn--black">READ MORE</button>
+                        <button type="button" class="btn__primary">READ MORE</button>
+                    </li>
+                    <li class="tiles__pick">
+                        <img src="" alt="">
+                        <strong>Massage Therapy</strong>
+                        <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
+                        <button type="button" class="btn__primary">READ MORE</button>
                     </li>
                     <li>
                         <img src="" alt="">
-                        <h3>Massage Therapy</h3>
+                        <strong>Massage Therapy</strong>
                         <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
-                        <button type="button" class="btn">READ MORE</button>
-                    </li>
-                    <li>
-                        <img src="" alt="">
-                        <h3>Massage Therapy</h3>
-                        <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
-                        <button type="button" class="btn btn--black">READ MORE</button>
+                        <button type="button" class="btn__primary">READ MORE</button>
                     </li>
                 </ul>
             </div>
         </div>
     </section><!-- //Service -->
 
-    <section class="section--testimonial">
+    <article class="section--Testimonials">
         <div class="inner">
             <p>
             First i beast be fruitful open you tree all Won't can't likeness and you're have whales creature seed to twograss life blessed you
@@ -105,7 +105,7 @@
             <div><img src="" alt=""></div>
             <span><em>Jack Marsh,</em>Executive</span>
         </div>
-    </section><!-- //testimonials -->
+    </article><!-- //testimonials -->
 
     <section class="section--team">
         <div class="inner">
@@ -118,18 +118,24 @@
                     <li>
                         <img src="" alt="">
                         <div class="team--profile">
-                            <h3>Joseph Austin</h3>
-                            <p>Thai Message</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" alt="">
-                        <div class="team--profile">
-                            <h3>David Hannan</h3>
+                            <strong>Joseph Austin</strong>
                             <p>Thai Message</p>
                             <ul>
                                 <li><a href="#" alt="get moved to on facebook"></a></li>
-                                <li><a href="#" alt="get moved to on twitter"></a></li>
+                                <li><a href="#" alt="get moved to on twitter" class="btn__sns--on"></a></li>
+                                <li><a href="#" alt="get moved to ongoogle"></a></li>
+                                <li><a href="#" alt="get moved to on instagram"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <img src="" alt="">
+                        <div class="team--profile">
+                            <strong>David Hannan</strong>
+                            <p>Thai Message</p>
+                            <ul>
+                                <li><a href="#" alt="get moved to on facebook"></a></li>
+                                <li><a href="#" alt="get moved to on twitter" class="btn__sns--on"></a></li>
                                 <li><a href="#" alt="get moved to ongoogle"></a></li>
                                 <li><a href="#" alt="get moved to on instagram"></a></li>
                             </ul>
@@ -138,8 +144,14 @@
                     <li>
                         <img src="" alt="">
                         <div class="team--profile">
-                            <h3>Cheryl Harris</h3>
+                            <strong>Cheryl Harris</strong>
                             <p>Thai Message</p>
+                            <ul>
+                                <li><a href="#" alt="get moved to on facebook"></a></li>
+                                <li><a href="#" alt="get moved to on twitter" class="btn__sns--on"></a></li>
+                                <li><a href="#" alt="get moved to ongoogle"></a></li>
+                                <li><a href="#" alt="get moved to on instagram"></a></li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -151,28 +163,23 @@
         <div class="inner">
             <div class="reserved__cont">
                 <form method="POST">
-                    NAME<input type="text">
-                    EMAIL ADDRESS<input type="text">
-                </form>
+                    <label>NAME<input type="text"></label>
+                    <label>EMAIL ADDRESS<input type="text"></label>
 
-                <form method="POST">
                     <select type="text">
                         <option value="SELECT SERVICE_01">SELECT SERVICE_01</option>
                         <option value="SELECT SERVICE_02">SELECT SERVICE_02</option>
                         <option value="SELECT SERVICE_03">SELECT SERVICE_03</option>
                     </select>
-                    <label for="">PHONE NUMBER<input type="text" id="phone_Box"></label>
-                </form>
 
-                <form method="POST">
-                <label for="resevedDate">DATE<input type="date"></label>
-                <label for="resevedTime">TIME<input type="time"></label>
-                </form>
+                    <label>PHONE NUMBER<input type="text"></label>
+                    <label>DATE<input type="date"></label>
+                    <label>TIME<input type="time"></label>
 
-                <form method="POST">
-                YOUR NOTE<input type="text" size="50">
+                    <label>YOUR NOTE<input type="text" size="50"></label>
+
+                    <button type="submit" class="btn__primary">Make an Appointment</button>
                 </form>
-                <button type="submit" class="btn">Make an Appointment</button>
             </div>
         </div>
     </section>
@@ -188,21 +195,21 @@
                 <li>
                     <img src="" alt="">
                     <p><span>RELAXATION</span>july 03, 2019</p>
-                    <h3>Had seed herbgrass mids</h3>
+                    <strong>Had seed herbgrass mids</strong>
                     <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                    <button type="button" class="btn btn--black">READ MORE</button>
+                    <button type="button" class="btn__primary">READ MORE</button>
                 </li>
                 <li>
                     <img src="" alt="">
-                    <h3>Divid image unto creeping</h3>
+                    <strong>Divid image unto creeping</strong>
                     <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                    <button type="button" class="btn">READ MORE</button>
+                    <button type="button" class="btn__primary">READ MORE</button>
                 </li>
                 <li>
                     <img src="" alt="">
-                    <h3>Had seed herbgrass mids</h3>
+                    <strong>Had seed herbgrass mids</strong>
                     <p>She'd yielding seasgreen appear unto worne seas field most come mede do bad</p>
-                    <button type="button" class="btn btn--black">READ MORE</button>
+                    <button type="button" class="btn__primary">READ MORE</button>
                 </li>
             </ul>
         </div>
@@ -225,17 +232,17 @@
                         <p>example@leospa.com </p>
                     </li>
                     <li>
-                        <p> +02 365 2365 3265 (02)
+                        <p>+02 365 2365 3265 (02)
                         <p>+01 365 2365 3265 (04) </p>
                     </li>
                 </ul>
-                <ul class="visit--form">
-                    <li><input type="text" placeholder="FIRST NAME"></li>
-                    <li><input type="email" placeholder="EMAIL ADDRESS"></li>
-                    <li><input type="text" placeholder="WRITE COMMENT"></li>
-                </ul>
+                <form method="POST" classs="visit--form">
+                    <input type="text" placeholder="FIRST NAME">
+                    <input type="email" placeholder="EMAIL ADDRESS">
+                    <input type="text" placeholder="WRITE COMMENT">
+                    <button type="submit" class="btn__primary">SUBMIT NOW</button>
+                </form>
             </div>
-            <button type="submit" class="btn">SUBMIT NOW</button>
         </div>
     </section><!-- // contact -->
 
@@ -253,7 +260,7 @@
         </ul>
         <ul class="footer__sns">
             <li><a href="#">facebook</a></li>
-            <li><a href="#">twitter</a></li>
+            <li><a href="#" class="btn__sns--on">twitter</a></li>
             <li><a href="#">instagram</a></li>
             <li><a href="#">vingle</a></li>
         </ul>

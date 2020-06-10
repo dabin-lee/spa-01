@@ -1,0 +1,12 @@
+/* SECTION--TEAM */
+
+
+.section--team{}
+.section--team .inner{}
+
+
+.team__cont{}
+
+
+.blog__cont li{background: orange;}
+.blog__cont li:hover .btn__primary{background: #000;}
