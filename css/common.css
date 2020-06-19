@@ -1,0 +1,67 @@
+/* COOMON*/
+html, body{height:100%;}
+.body__wrapper{font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: 400; color: #333; box-sizing: border-box;}
+
+
+/* common - float clearfix */
+.clearfix::after{content:''; display: block; clear: both;}
+.float--left{float:left;}
+.float--right{float:right;}
+
+/* COOMON-section */
+section > div{position: relative;}
+header .inner, section .inner{margin: 0 auto; max-width:1140px; height:auto; text-align: center;}
+
+
+.section--banner .title h2{font-family: 'Rufina', serif;}
+/* COOMON-title */
+.title h2{margin-top:130px; font-family: 'Rufina', serif; font-weight: 700; font-size: 42px; line-height: 2em; color:#263a41;}
+.title span{font-size:15px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color:#888;}
+.title p{font-size:15px; line-height: 2em; color:#9b9b9b;}
+.title h2 + p {margin-top:18px;}
+.title + button {margin-top: 74px;}
+
+/* COMMON - button */
+.btn__primary{
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: #ff817e;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* .tiles__list--btn{background: #30383b;} */
+
+
+/* FLEXIBLE BOX */
+.align__inline--flex{display: flex;}
+
+/* tiles */
+.tiles{display: flex; justify-content: space-between; margin-top:87px;}
+.tiles article{padding: 20px 20px 0 20px; width: 360px; height:580px; border:1px solid #e3e6ea; cursor: pointer;  box-sizing: border-box;}
+.tiles article:hover{box-shadow: 0 0 20px rgba(0,0,0,.2);}
+.tiles article:hover .btn__primary{ transition: .3s; background: #ff817e;}
+.tiles article .summary--img{width: 320px; height:264px; background: #999;}
+.tiles article .summary--img img{max-width: 100%; box-sizing: border-box;}
+
+.tiles article strong, .tiles figcaption strong
+{display:inline-block; font-family: 'Rufina', serif; font-size:22px; font-weight: 700; line-height: 2em;}
+.tiles article p, .tiles figcaption p
+{font-size: 14px; line-height: 2em; color:#999;}
+.tiles article button{margin-top: 30px;}
+.tiles figcaption strong{margin-top: 28px;}
+
+/* tiles - btn */
+.tiles .btn__primary{background: #30383b;}
+
+
+/* footer - ul */
+/* .footer .inner .footer__list--btn{margin: 45px auto 0;}
+.footer .inner .footer__list--btn ul{display: inline-block;}
+.footer .inner .footer__list--btn ul li{float:left;}
+.footer .inner .footer__list--btn ul li a{display:block;} */
