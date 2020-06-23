@@ -13,7 +13,6 @@ section > div{position: relative;}
 header .inner, section .inner{margin: 0 auto; max-width:1140px; height:auto; text-align: center;}
 
 
-.section--banner .title h2{font-family: 'Rufina', serif;}
 /* COOMON-title */
 .title h2{margin-top:130px; font-family: 'Rufina', serif; font-weight: 700; font-size: 42px; line-height: 2em; color:#263a41;}
 .title span{font-size:15px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; color:#888;}
@@ -22,8 +21,9 @@ header .inner, section .inner{margin: 0 auto; max-width:1140px; height:auto; tex
 .title + button {margin-top: 74px;}
 
 /* COMMON - button */
+
 .btn__primary{
-    display: block;
+        display: block;
     margin: 0 auto;
     width: 170px;
     height: 50px;
@@ -37,6 +37,16 @@ header .inner, section .inner{margin: 0 auto; max-width:1140px; height:auto; tex
 }
 /* .tiles__list--btn{background: #30383b;} */
 
+/* input */
+input{
+    position: relative;
+    outline: none;
+    background: none;
+    box-sizing: border-box;
+}
+label{
+    position: absolute;
+}
 
 /* FLEXIBLE BOX */
 .align__inline--flex{display: flex;}
@@ -45,7 +55,7 @@ header .inner, section .inner{margin: 0 auto; max-width:1140px; height:auto; tex
 .tiles{display: flex; justify-content: space-between; margin-top:87px;}
 .tiles article{padding: 20px 20px 0 20px; width: 360px; height:580px; border:1px solid #e3e6ea; cursor: pointer;  box-sizing: border-box;}
 .tiles article:hover{box-shadow: 0 0 20px rgba(0,0,0,.2);}
-.tiles article:hover .btn__primary{ transition: .3s; background: #ff817e;}
+.tiles article:hover .btn__primary{transition: .3s; background: #ff817e;}
 .tiles article .summary--img{width: 320px; height:264px; background: #999;}
 .tiles article .summary--img img{max-width: 100%; box-sizing: border-box;}
 

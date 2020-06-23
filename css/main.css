@@ -1,51 +1,45 @@
 
 /* HEADER */
 header{position: relative; text-align: left;}
+header::after{content: ''; position: absolute; top:0; right:0%; background:url(../images/bg_02.png)no-repeat ; width: 834px; height: 890px;}
 header .inner{height:96px;}
 header .header__logo{padding:20px 0 0 28px;}
 header .header__logo a{display:block; width: 54px; height:82px; background: url(../images/header_logo.png); text-indent: -9999px;}
 header nav{}
-header nav ul{padding:70px 0 0 195px;}
-header nav ul li{margin-right: 30px;}
+header nav ul{padding:74px 0 0 214px;}
+header nav ul li{margin-right: 49px;}
 header nav ul li:last-child{margin-right: 0;}
 header nav ul li a{display: block; font-size: 14px; font-weight: 500; line-height: 2em;}
 
-
 /* 1. section--banner */
-.section--banner{margin-top:190px; }
+.section--banner{padding-top:190px; background: url(../images/bg_01.png)no-repeat left bottom; background-size: 239px 533px;}
 .section--banner .inner{text-align: left;}
-.section--banner .title{font-family: 'Rufina', serif;}
+.section--banner .title{font-family: 'Rufina', serif; z-index: 9999;}
 .section--banner .title strong{font-weight: 400; color:#ff817e; text-transform: uppercase; line-height: 2em; letter-spacing: 1.5px;}
 .section--banner .title h2{margin-top:20px; font-size:60px; font-weight: 700; line-height: 1.3em; color:#000;}
 .section--banner .title p{margin-top:48px; font-family: 'Roboto', sans-serif; font-size:15px; line-height: 2em; color:#000;}
 
 .section--banner .banner__btn{margin-top:58px;}
-.section--banner .btn--submit{margin-right: 56px; padding: 0 30px;  width: 170px; height:50px; background :#ff817e; border:none; font-weight: 500; color:#fff;}
-.section--banner .btn--submit span{position: relative; font-size: 13px;}
-.section--banner .btn--submit span::before{ content: ''; position: absolute; top: 50%; right:-20px; width: 11px; height: 1px; background: #fff;}
-.section--banner .btn--submit span::after{content: ''; position: absolute; top:35%; right:-19%; width:5px; height:5px; border-right: 1px solid #fff; border-top: 1px solid #fff; transform: rotate(45deg);}
-
-
+.section--banner .btn--submit{position: relative; margin-right: 56px; width: 170px; height:50px; background :#ff817e; border:none; font-weight: 500; color:#fff;}
+.section--banner .btn--submit span{display: inline-block; padding-left: 25px; width: 100%; font-size: 13px; text-align: left;}
+.section--banner .btn--submit ::before{content: ''; position: absolute; top: 50%; right:10%; width: 11px; height: 1px; background: #fff;}
+.section--banner .btn--submit ::after{content: ''; position: absolute; top:43.9%; right:10%; width:5.5px; height:5.5px; border-right: 1px solid #fff; border-top: 1px solid #fff; transform: rotate(45deg);}
 
 .section--banner .banner__summary--play{width: 165px; height: 44px;}
 .section--banner .banner__summary--play a{position: relative; display:block; margin-right: 15px; width: 44px; height: 44px; border-radius: 50%; background: #fcf5ee;}
-
-
 .section--banner .banner__summary--play a::after{
     content:''; position: absolute; top:30%; left:45%; transform:rotate(90deg); height: 10px;
-    border-bottom:10px solid #ff817e; border-right: 10px solid transparent; border-left: 10px solid  transparent;
-}
-
+    border-bottom:10px solid #ff817e; border-right: 10px solid transparent; border-left: 10px solid  transparent;}
 .section--banner .banner__summary--play span{margin:auto 0; display: inline-block; line-height:3.2em; font-size: 15px; font-weight: 500;}
+/* .section--banner{background: url(../images/bg_01.png)no-repeat left top; background: url(../images/bg_04.png)no-repeat -325px -758px;} */
 
 
 /* 2. section--about */
-.section--about{margin-top:370px;}
-.section--about .inner{}
+.section--about{padding-top:370px; background: url(../images/bg_04.png)no-repeat 310px 140px; background-size: 132px 140px; }
 .section--about .title{position: relative;}
 .section--about .title::before{content:''; position: absolute; left:50%; top:-50%; transform: translateX(-50%); width:86px; height:74px; background: url(../images/logo.png)no-repeat; }
-.section--about .title h2{margin-top:13px;}
-
+.section--about .title h2{position:relative; margin-top:13px;}
+.section--about .title h2::after{content:''; position: absolute; right:0; bottom:0; width:88px; height:75px; background: url(../images/bg_03.png)no-repeat; }
 
 
 /* 3. section--feature */
@@ -55,8 +49,7 @@ header nav ul li a{display: block; font-size: 14px; font-weight: 500; line-heigh
 .section--feature .feature__cont ul li:last-child{margin-right:0;}
 .section--feature .feature__cont ul li span{font-family: 'Rufina', serif; font-size: 22px; font-weight: 500; color:#fff;}
 
-.section--feature .feature__cont .feature__block{background: #ff817e;}
-.section--feature .feature__cont .feature__block span::before{content: ''; position:absolute; top:47%; left:50%; transform: translate(-50%, -50%); width: 47px; height:42px; background: url(../images/hover_herbal.png)no-repeat; background-size: contain;}
+.section--feature .feature__cont .feature__block{background: #ff817e url(../images/hover_herbal.png)no-repeat 50% 240px; background-size: 47px 42px; }
 
 /* 4. section--service */
 .section--service{}
@@ -65,16 +58,16 @@ header nav ul li a{display: block; font-size: 14px; font-weight: 500; line-heigh
 
 /* 5. section--testimonials */
 .section--testimonials{margin-top:140px; height:713px; background: #fff9f8;}
-.section--testimonials article {position: absolute; top:0; left:0; height:713px; width: 100%;}
-.section--testimonials article::before{content: ''; position: absolute; top:137px; left:50%; transform: translateX(-50%); width: 60px; height:60px; background:url('../images/quote.png') no-repeat left top; background-size: 60px 51px;}
+.section--testimonials article {position: absolute; height:713px; width: 100%; background:url('../images/quote.png') no-repeat; background-size: 60px 51px; background-position: 50% 135px;}
 .section--testimonials article .inner{padding : 0 98px 0 80px; box-sizing: border-box;}
 
 .section--testimonials .indicator--item{position: relative; padding-top:238px; text-align: center; }
 .section--testimonials .indicator--item p {margin-top: 230px; font-family: 'Rufina', serif; font-size:18px; font-weight: 700; line-height: 2em; color:#263a41;}
-.section--testimonials .indicator--item .executive--photo{overflow: hidden; margin : 42px auto 0; width: 76px; height:76px; border-radius: 50%; background: #000;}
-.section--testimonials .indicator--item .executive--photo img{width: 100%;}
-.section--testimonials .indicator--item .executive--name{display:inline-block; margin-top:24px; font-size:15px; font-weight: 400; line-height: 2em; color:#263a41;}
+
+.section--testimonials .indicator--item .executive--photo{overflow: hidden; margin : 42px auto 0; width: 76px; height:76px; border-radius: 50%; background: url(../images/manager.jpg)no-repeat 50% 10%;}
+.section--testimonials .indicator--item .executive--name {display:inline-block; margin-top:24px; font-size:15px; font-weight: 400; line-height: 2em; color:#263a41;}
 .section--testimonials .indicator--item .executive--name em{font-family: 'Rufina', serif; font-size:22px; font-weight: 400;}
+
 
 .section--testimonials .slider__indicator--btn{ position: absolute; bottom:137px; left:50%; transform: translateX(-50%); width: 85px; justify-content: space-between; align-items: center;}
 .section--testimonials .slider__indicator--btn li{width: 10px; height: 10px; border-radius: 50%; background-color: #ffc3c2; cursor: pointer;}
@@ -111,8 +104,8 @@ header nav ul li a{display: block; font-size: 14px; font-weight: 500; line-heigh
 
 .section--reserved{margin-top:215px; height: 642px; background: #fff9f8;}
 .section--reserved::before{content:''; position: absolute; top:0; left:0; height: inherit; width: 778px; background: #b3afa6;}
-.section--reserved .reserved__cont{float:right; margin-left:100px; padding-top:127px; width: 750px;}
-.section--reserved .reserved__cont form input, select{margin: 0 20px 37px 0; padding-bottom:13px; display:inline-block; width: 320px; height: 45px; color:#999; font-size: 12px; border-bottom:1px solid #d4d3d3; background: none; box-sizing: border-box; }
+.section--reserved .reserved__cont{float:right; padding-top:127px; width: 750px;}
+.section--reserved .reserved__cont form input, select{display:inline-block; margin: 0 20px 37px 0; padding-bottom:13px; width: 320px; height: 45px; color:#999; font-size: 12px; border-bottom:1px solid #d4d3d3; background: none;}
 .section--reserved .reserved__cont .form--note{margin-top:74px; width: 652px; box-sizing: border-box; }
 .section--reserved .reserved__cont button{margin-top:3px;}
 
@@ -124,24 +117,18 @@ header nav ul li a{display: block; font-size: 14px; font-weight: 500; line-heigh
 
 /* 9. section--contact */
 .section--contact .contact__cont{margin-top: 87px; padding: 87px 90px 0 90px; height:457px;}
-.section--contact .contact__cont .visit--info{margin-right:128px; }
+.section--contact .contact__cont .visit--info{margin:20px 128px 0 0 ;}
 .section--contact .contact__cont .visit--info li{display: flex; position: relative; margin-bottom:50px; width: 262px; }
 .section--contact .contact__cont .visit--info li:last-child{margin-bottom:0;}
 .section--contact .contact__cont .visit--info li::before{content:''; display:inline-block; width: 50px; height:50px; border-radius: 50%; background: #ff817e;}
 .section--contact .contact__cont .visit--info li::after{content:''; position: absolute;  width: 50px; height:50px; background: url(../images/visit--info__icon.png)16px 15px no-repeat;}
 .section--contact .contact__cont .visit--info li:nth-child(2)::after{background-position-y: -83px;}
 .section--contact .contact__cont .visit--info li:nth-child(3)::after{background-position-y: -183px;}
-
 .section--contact .contact__cont .visit--info li p{margin-left:30px; font-size:14px; line-height: 2em; text-align: left; color:#888;}
 
-
-
-
-
-.section--contact .contact__cont .visit--form {}
 .section--contact .contact__cont .visit--form button{margin-top:30px; margin-left:0;}
 .section--contact .contact__cont .visit--form input{margin-bottom:20px; padding-left: 20px; width: 554px; height: 50px; color:#999; border: 1px solid #e3e6ea;}
-.section--contact .contact__cont .visit--form .input--board{width: 100%; height: 150px; padding : 26px 20px 88px; box-sizing: border-box;}
+.section--contact .contact__cont .visit--form .input--board{height: 150px; padding : 26px 20px 88px;}
 
 
 
@@ -159,23 +146,29 @@ footer .inner .footer__nav ul li{float:left; display:inline-block; margin-right:
 footer .inner .footer__nav ul li a{display:block; font-weight: 500; color:#263a41;}
 footer .inner .footer__nav ul li:last-child{margin-right: 0;}
 
-footer .footer--sns{}
 footer .footer--sns ul{display: inline-block; margin-top: 45px;}
 footer .footer--sns ul li{position: relative; float:left; margin: 0 14px;}
 footer .footer--sns ul li::before{position:absolute; left: 28px; content: ''; width: 1px; height:16px; background: #b1b4bb;}
 footer .footer--sns ul li:last-child::before{display: none;}
-footer .footer--sns ul li a{display:block; width: 14px; height: 14px; background: url(../images/sns.png)no-repeat; text-indent: -9999px;}
-footer .footer--sns .facebook a{background-position-x: 0; }
-footer .footer--sns .twitter a{background-position-x: -35px; }
+footer .footer--sns ul li a{display:block; width: 14px; height: 15px; background: url(../images/sns_off.png)no-repeat; transition: .3s; text-indent: -9999px;}
+footer .footer--sns .twitter a{background-position-x: -36px; }
 footer .footer--sns .instagram a{background-position-x: -81px; }
 footer .footer--sns .vingle a{background-position-x: -126px; }
+
+footer .footer--sns ul li:hover a{background: url(../images/sns.png)no-repeat;}
+footer .footer--sns ul .twitter:hover a{background-position-x: -36px;}
+footer .footer--sns ul .instagram:hover a{background-position-x: -81px;}
+footer .footer--sns ul .vingle:hover a{background-position-x: -126px;}
 
 footer p{margin-top:48px; font-size: 13px; text-transform: uppercase; color:#888;}
 footer p em{color: #ff817e;}
 
-/* 질문사항
+/*
+질문사항
 
-1. font-family도 별도 class 가능?
-flex 또한
+- 정렬할때 display: flex, table, grid 사용 여부
+- font-family도 class로
+- 가상요소로 이미지? or background
+
 
 */
