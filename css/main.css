@@ -1,18 +1,19 @@
 
 /* HEADER */
 header{position: relative; text-align: left;}
-header::after{content: ''; position: absolute; top:0; right:0%; width: 834px; height: 890px; background:url(../images/bg_02.png)no-repeat;}
+header::after{content: ''; position: absolute; top:0; right:0%; width: 834px; height: 890px; background:url(/images/bg_02.png)no-repeat;}
 header .inner{height:96px;}
 header .header__logo{padding:20px 0 0 28px;}
-header .header__logo a{display:block; width: 54px; height:82px; background: url(../images/header_logo.png); text-indent: -9999px;}
+header .header__logo a{display:block; width: 54px; height:82px; background: url(/images/header_logo.png); text-indent: -9999px;}
 header nav{z-index: 9999;}
 header nav ul{padding:74px 0 0 214px;}
 header nav ul li{margin-right: 49px;}
 header nav ul li:last-child{margin-right: 0;}
 header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-height: 2em;}
 
+
 /* 1. section--banner */
-.section--banner{padding-top:190px; background: url(../images/bg_01.png)no-repeat left bottom; background-size: 239px 533px;}
+.section--banner{margin-top:190px; }
 .section--banner .inner{text-align: left;}
 .section--banner .title{font-family: 'Rufina', serif;}
 .section--banner .title strong{font-weight: 400; color:#ff817e; line-height: 2em; letter-spacing: 1.5px; text-transform: uppercase;}
@@ -32,11 +33,12 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 
 
 /* 2. section--about */
-.section--about{padding-top:370px; background: url(../images/bg_04.png)no-repeat 310px 140px; background-size: 132px 140px; }
+.section--about{margin-top:370px;}
+.section--about .inner{}
 .section--about .title{position: relative;}
-.section--about .title::before{content:''; position: absolute; left:50%; top:-50%; transform: translateX(-50%); width:86px; height:74px; background: url(../images/logo.png)no-repeat; }
-.section--about .title h2{position:relative; margin-top:13px;}
-.section--about .title h2::after{content:''; position: absolute; right:0; bottom:0; width:88px; height:75px; background: url(../images/bg_03.png)no-repeat; }
+.section--about .title::before{content:''; position: absolute; left:50%; top:-50%; transform: translateX(-50%); width:86px; height:74px; background: url(/images/logo.png)no-repeat; }
+.section--about .title h2{margin-top:13px;}
+
 
 
 /* 3. section--feature */
@@ -45,7 +47,7 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 .section--feature .feature__cont ul li{position: relative; margin-right:5px; padding-top:300px; width: 477px; height:570px; background: #ddd; text-align: center; box-sizing: border-box;}
 .section--feature .feature__cont ul li:last-child{margin-right:0;}
 .section--feature .feature__cont ul li span{display: none; font-family: 'Rufina', serif; font-size: 22px; font-weight: 500; color:#fff;}
-.section--feature .feature__cont .feature__block{background: #ff817e url(../images/hover_herbal.png)no-repeat 50% 240px; background-size: 47px 42px; }
+.section--feature .feature__cont .feature__block{background: #ff817e url(/images/hover_herbal.png)no-repeat 50% 240px; background-size: 47px 42px; }
 
 
 /* 4. section--service */
@@ -60,9 +62,9 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 .section--testimonials .indicator--item{position: relative; text-align: center;}
 .section--testimonials .indicator--item .inner{padding : 0 98px 0 80px; box-sizing: border-box;}
 .section--testimonials .indicator--item p {margin-top: 230px; font-family: 'Rufina', serif; font-size:18px; font-weight: 700; line-height: 2em; color:#263a41;}
-
-.section--testimonials .indicator--item .executive--photo{overflow: hidden; margin : 42px auto 0; width: 76px; height:76px; border-radius: 50%; background: url(../images/manager.jpg)no-repeat 50% 10%;}
-.section--testimonials .indicator--item .executive--name {display:inline-block; margin-top:24px; font-size:15px; font-weight: 400; line-height: 2em; color:#263a41;}
+.section--testimonials .indicator--item .executive--photo{overflow: hidden; margin : 42px auto 0; width: 76px; height:76px; border-radius: 50%; background: #000;}
+.section--testimonials .indicator--item .executive--photo img{width: 100%;}
+.section--testimonials .indicator--item .executive--name{display:inline-block; margin-top:24px; font-size:15px; font-weight: 400; line-height: 2em; color:#263a41;}
 .section--testimonials .indicator--item .executive--name em{font-family: 'Rufina', serif; font-size:22px; font-weight: 400;}
 
 .section--testimonials .slider__indicator--btn{position: absolute; bottom:137px; left:50%; transform: translateX(-50%); width: 85px; justify-content: space-between; align-items: center;}
@@ -83,12 +85,12 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 .section--team .team__cont .over .btn__sns li{float: left; margin-right:42px;}
 .section--team .team__cont .over .btn__sns li:last-child{margin-right:0;}
 
-.section--team .team__cont .over .btn__sns li a{display:block; width: 30px; height: 32px; background: url(../images/team_sns.png)0 no-repeat; text-indent: -9999px; cursor: pointer;}
+.section--team .team__cont .over .btn__sns li a{display:block; width: 30px; height: 32px; background: url(/images/team_sns.png)0 no-repeat; text-indent: -9999px; cursor: pointer;}
 .section--team .team__cont .over .btn__sns li:nth-child(2) a{background-position-x: -43px;}
 .section--team .team__cont .over .btn__sns li:nth-child(3) a{background-position-x: -88px;}
 .section--team .team__cont .over .btn__sns li:nth-child(4) a{background-position-x: -133px;}
 
-.section--team .team__cont .over .btn__sns li:hover a{display:block; width: 30px; height: 32px; background: url(../images/team_sns_hover.png)0 no-repeat; text-indent: -9999px; transition: .3s;}
+.section--team .team__cont .over .btn__sns li:hover a{display:block; width: 30px; height: 32px; background: url(/images/team_sns_hover.png)0 no-repeat; text-indent: -9999px; transition: .3s;}
 .section--team .team__cont .over .btn__sns li:nth-child(2):hover a{background-position-x: -43px;}
 .section--team .team__cont .over .btn__sns li:nth-child(3):hover a{background-position-x: -88px;}
 .section--team .team__cont .over .btn__sns li:nth-child(4):hover a{background-position-x: -133px;}
@@ -112,25 +114,31 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 
 /* 9. section--contact */
 .section--contact .contact__cont{margin-top: 87px; padding: 87px 90px 0 90px; height:457px;}
-.section--contact .contact__cont .visit--info{margin:20px 128px 0 0 ;}
+.section--contact .contact__cont .visit--info{margin-right:128px; }
 .section--contact .contact__cont .visit--info li{display: flex; position: relative; margin-bottom:50px; width: 262px; }
 .section--contact .contact__cont .visit--info li:last-child{margin-bottom:0;}
 .section--contact .contact__cont .visit--info li::before{content:''; display:inline-block; width: 50px; height:50px; border-radius: 50%; background: #ff817e;}
-.section--contact .contact__cont .visit--info li::after{content:''; position: absolute;  width: 50px; height:50px; background: url(../images/visit--info__icon.png)16px 15px no-repeat;}
+.section--contact .contact__cont .visit--info li::after{content:''; position: absolute;  width: 50px; height:50px; background: url(/images/visit--info__icon.png)16px 15px no-repeat;}
 .section--contact .contact__cont .visit--info li:nth-child(2)::after{background-position-y: -83px;}
 .section--contact .contact__cont .visit--info li:nth-child(3)::after{background-position-y: -183px;}
+
 .section--contact .contact__cont .visit--info li p{margin-left:30px; font-size:14px; line-height: 2em; text-align: left; color:#888;}
 
+
+
+
+
+.section--contact .contact__cont .visit--form {}
 .section--contact .contact__cont .visit--form button{margin-top:30px; margin-left:0;}
 .section--contact .contact__cont .visit--form input{margin-bottom:20px; padding-left: 20px; width: 554px; height: 50px; color:#999; border: 1px solid #e3e6ea;}
-.section--contact .contact__cont .visit--form .input--board{height: 150px; padding : 26px 20px 88px;}
+.section--contact .contact__cont .visit--form .input--board{width: 100%; height: 150px; padding : 26px 20px 88px; box-sizing: border-box;}
 
 
 /* 10. footer */
 footer{margin-top: 140px; width: 100%; height: 457px; background:#fff9f8;}
 footer .inner{max-width: 1140px; margin:0 auto; padding-top:100px; text-align: center;}
 footer .footer__logo{margin: 0 auto; width: 108px; height:78px; text-indent: -9999px;}
-footer .footer__logo a{display:block; width: 100%; height:100%; background: url(../images/footer_logo.png)no-repeat;}
+footer .footer__logo a{display:block; width: 100%; height:100%; background: url(/images/footer_logo.png)no-repeat;}
 
 footer .inner .footer__nav{margin-top: 45px;}
 footer .inner .footer__nav ul {display: inline-block;}
@@ -139,19 +147,16 @@ footer .inner .footer__nav ul li a{display:block; font-weight: 500; color:#263a4
 footer .inner .footer__nav ul li:hover a{color: #ff817e; transition: .3s;}
 footer .inner .footer__nav ul li:last-child{margin-right: 0;}
 
+footer .footer--sns{}
 footer .footer--sns ul{display: inline-block; margin-top: 45px;}
 footer .footer--sns ul li{position: relative; float:left; margin: 0 14px;}
 footer .footer--sns ul li::before{position:absolute; left: 28px; content: ''; width: 1px; height:16px; background: #b1b4bb;}
 footer .footer--sns ul li:last-child::before{display: none;}
-footer .footer--sns ul li a{display:block; width: 14px; height: 15px; background: url(../images/sns_off.png)no-repeat; transition: .3s; text-indent: -9999px;}
-footer .footer--sns .twitter a{background-position-x: -36px; }
+footer .footer--sns ul li a{display:block; width: 14px; height: 14px; background: url(/images/sns.png)no-repeat; text-indent: -9999px;}
+footer .footer--sns .facebook a{background-position-x: 0; }
+footer .footer--sns .twitter a{background-position-x: -35px; }
 footer .footer--sns .instagram a{background-position-x: -81px; }
 footer .footer--sns .vingle a{background-position-x: -126px; }
-
-footer .footer--sns ul li:hover a{background: url(../images/sns.png)no-repeat;}
-footer .footer--sns ul .twitter:hover a{background-position-x: -36px;}
-footer .footer--sns ul .instagram:hover a{background-position-x: -81px;}
-footer .footer--sns ul .vingle:hover a{background-position-x: -126px;}
 
 footer p{margin-top:48px; font-size: 13px; text-transform: uppercase; color:#888;}
 footer p em{color: #ff817e;}
@@ -162,5 +167,7 @@ footer p em{color: #ff817e;}
 - font-family도 class로
 - 가상요소로 이미지? or background
 
+1. font-family도 별도 class 가능?
+flex 또한
 
 */
