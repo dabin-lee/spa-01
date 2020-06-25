@@ -11,8 +11,6 @@ html, body{height:100%;}
 /* COOMON-section */
 section{position: relative;}
 .inner{margin: 0 auto; width:1140px; height:auto;}
-
-
 .section--banner .title h2{font-family: 'Rufina', serif;}
 
 
@@ -24,13 +22,6 @@ section{position: relative;}
 
 /* COMMON - button */
 .btn__primary{display: block;}
-
-
-
-/* btn */
-.btn__primary{}
-
-
 
 
 /* HEADER */
@@ -50,7 +41,6 @@ header nav ul li a{display: block; font-size: 14px; font-weight: 500; line-heigh
 .section--banner .title strong{font-weight: 400; color:#ff817e; text-transform: uppercase; line-height: 2em; letter-spacing: 1.5px;}
 .section--banner .title h2{font-size:60px; font-weight: 700; line-height: 1.3em; color:#000;}
 .section--banner .title p{margin-top:48px; font-family: 'Roboto', sans-serif; font-size:15px; line-height: 2em; color:#000;}
-
 
 .banner__btn{margin-top:58px;}
 .btn--submit{margin-right: 56px; width: 170px; height:50px; color:#ff817e;}
