@@ -21,7 +21,7 @@
                 <a href="#">header_logo</a>
             </h1>
             <nav>
-                <ul class="align__inline--flex">
+                <ul class="nav--bar align__inline--flex">
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
                     <li><a href="">FEATURE</a></li>
@@ -42,11 +42,12 @@
                         <p>Together creeping heaven upon third dominion be upon won't darkness rule<br>behold it createdgood saw after she'd Our set living.</p>
                     </div>
                     <div class="banner__btn align__inline--flex">
-                        <button type="submit" class="btn--submit"><span>RESERVED NOW</span></button>
-                        <div class="banner__summary--play clearfix">
-                            <a href="#" class="btn--play float--left"></a>
-                            <span class="float--left">Watch our story</span>
-                        </div>
+                        <button type="submit" class="btn--submit"><span><em>RESERVED NOW</em></span></button>
+                        <a href="#" class="banner__summary--play clearfix">
+                            <span class="btn--play float--left"></span>
+                            <em class="float--left">Watch our story</em>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -242,26 +243,25 @@
 
         <section>
             <div class="section--reserved">
-                <div class="inner clearfix">
-                    <div class="reserved__cont">
-                        <form method="POST">
-                            <input type="text" id="nnono" title="NAME" value="" placeholder="NAME" >
-                            <input type="text" title="EMAIL ADDRESS" value="" placeholder="EMAIL ADDRESS">
+                <div class="reserved__thumbnail"></div>
+                <div class="reserved__cont">
+                    <form method="POST">
+                        <input type="text" id="nnono" title="NAME" value="" placeholder="NAME" >
+                        <input type="text" title="EMAIL ADDRESS" value="" placeholder="EMAIL ADDRESS">
 
-                            <select type="text" style="">
-                                <option value="SELECT SERVICE_01">SELECT SERVICE</option>
-                                <option value="SELECT SERVICE_02">SELECT SERVICE_01</option>
-                                <option value="SELECT SERVICE_03">SELECT SERVICE_02</option>
-                            </select>
+                        <select type="text" style="">
+                            <option value="SELECT SERVICE_01">SELECT SERVICE</option>
+                            <option value="SELECT SERVICE_02">SELECT SERVICE_01</option>
+                            <option value="SELECT SERVICE_03">SELECT SERVICE_02</option>
+                        </select>
 
-                            <input type="text" title="PHONE NUMBER" value="" placeholder="PHONE NUMBER">
-                            <input type="date" placeholder="DATE">
-                            <input type="time" placeholder="TIME">
-                            <input type="text" class="form--note" title="YOUR NOTE" value="" size="50" placeholder="YOUR NOTE">
+                        <input type="text" title="PHONE NUMBER" value="" placeholder="PHONE NUMBER">
+                        <input type="date" placeholder="DATE">
+                        <input type="time" placeholder="TIME">
+                        <input type="text" class="form--note" title="YOUR NOTE" value="" size="50" placeholder="YOUR NOTE">
 
-                            <button type="submit" class="btn__primary">Make an Appointment</button>
-                        </form>
-                    </div>
+                        <button type="submit" class="btn__primary">Make an Appointment</button>
+                    </form>
                 </div>
             </div>
         </section><!-- // section--reserved -->
@@ -348,8 +348,8 @@
             <div class="footer__logo">
                 <a href="#">Github</a>
             </div>
-            <div class="footer__list--btn footer__nav clearfix">
-                <ul>
+            <div class="footer__nav--bar">
+                <ul class="nav--bar align__inline--flex">
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">FEATURE</a></li>

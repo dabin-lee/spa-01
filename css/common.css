@@ -60,8 +60,6 @@ header .inner, section .inner{margin: 0 auto; max-width:1140px; height:auto; tex
 .tiles .btn__primary{background: #30383b;}
 
 
-/* footer - ul */
-/* .footer .inner .footer__list--btn{margin: 45px auto 0;}
-.footer .inner .footer__list--btn ul{display: inline-block;}
-.footer .inner .footer__list--btn ul li{float:left;}
-.footer .inner .footer__list--btn ul li a{display:block;} */
+/* nav - hover */
+.nav--bar li a{display: block; font-weight: 500; font-size: 14px; line-height: 2em;  color:#263a41;}
+.nav--bar li:hover a{color: #ff817e; transition: .3s;}

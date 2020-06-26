@@ -15,6 +15,7 @@ label,img,input,select,textarea,button{
 	line-height: 2em;
 	vertical-align:middle;
 	border:none;
+	outline: none;
 }
 
 

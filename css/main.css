@@ -8,9 +8,6 @@ header .header__logo a{display:block; width: 54px; height:82px; background: url(
 header nav{z-index: 9999;}
 header nav ul{padding:74px 0 0 214px;}
 header nav ul li{margin-right: 49px;}
-header nav ul li:last-child{margin-right: 0;}
-header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-height: 2em;}
-
 
 /* 1. section--banner */
 .section--banner{margin-top:190px; }
@@ -21,20 +18,21 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 .section--banner .title p{margin-top:48px; font-family: 'Roboto', sans-serif; font-size:15px; line-height: 2em; color:#000;}
 
 .section--banner .banner__btn{margin-top:58px;}
-.section--banner .btn--submit{position: relative; margin-right: 56px; width: 170px; height:50px; border:none; background :#ff817e; font-weight: 500; color:#fff;}
-.section--banner .btn--submit span{display: inline-block; font-size: 13px; text-align: left;}
-.section--banner .btn--submit ::before{content: ''; position: absolute; top: 50%; right:10%; width: 11px; height: 1px; background: #fff;}
-.section--banner .btn--submit ::after{content: ''; position: absolute; top:43.9%; right:10%; width:5.5px; height:5.5px; border-right: 1px solid #fff; border-top: 1px solid #fff; transform: rotate(45deg);}
+.section--banner .btn--submit{margin-right: 56px; width: 170px; height:50px; border:none; background :#ff817e; font-weight: 500; color:#fff; cursor: pointer;}
+.section--banner .btn--submit span{display: inline-block; padding-left:25px; width:100%; font-size: 13px; text-align: left; box-sizing: border-box;}
+.section--banner .banner__btn em{position: relative;}
+.section--banner .banner__btn em::before{content: ''; position: absolute; top:50%; right:-15px;  width: 11px; height: 1px; background: #fff;}
+.section--banner .banner__btn em::after{content: ''; position: absolute; top:36%; right:-15px; width:6px; height:6px; border-right: 1px solid #fff; border-top: 1px solid #fff; transform: rotate(45deg);}
 
-.section--banner .banner__summary--play{width: 170px; height: 50px; cursor: pointer;}
-.section--banner .banner__summary--play a{display:block; position: relative; margin-right: 14px; width: 50px; height: 50px; border-radius: 50%; background: #fcf5ee; box-sizing: border-box;}
-.section--banner .banner__summary--play a::after{content:''; position: absolute; top:30%; left:45%; transform:rotate(90deg); height: 10px; border-bottom:10px solid #ff817e; border-right: 10px solid transparent; border-left: 10px solid  transparent;}
-.section--banner .banner__summary--play span{display: inline-block; margin:auto 0; font-size: 15px; font-weight: 500; line-height:3.2em;}
+.section--banner .banner__summary--play{display:block; width: 170px; height: 50px; cursor: pointer;}
+.section--banner .banner__summary--play .btn--play{position: relative; margin-right: 14px; width: 50px; height: 50px; border-radius: 50%; background: #fcf5ee; box-sizing: border-box;}
+.section--banner .banner__summary--play .btn--play::after{content:''; position: absolute; top:30%; left:45%; transform:rotate(90deg); height: 10px; border-bottom:10px solid #ff817e; border-right: 10px solid transparent; border-left: 10px solid  transparent;}
+.section--banner .banner__summary--play em{display: inline-block; margin:auto 0; font-size: 15px; font-weight: 500; line-height:3.2em;}
+
 
 
 /* 2. section--about */
 .section--about{margin-top:370px;}
-.section--about .inner{}
 .section--about .title{position: relative;}
 .section--about .title::before{content:''; position: absolute; left:50%; top:-50%; transform: translateX(-50%); width:86px; height:74px; background: url(../images/logo.png)no-repeat; }
 .section--about .title h2{margin-top:13px;}
@@ -55,15 +53,14 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 
 
 /* 5. section--testimonials */
-.section--testimonials{position: relative; margin-top:140px; height:713px; background: #fff9f8;}
+.section--testimonials{overflow-x: hidden; position: relative; margin-top:140px; height:713px; background: #fff9f8;}
 .section--testimonials .article__group--testimonials {position: absolute; height:100%; width: 100%; }
 .section--testimonials .indicator--article { position: absolute; height:713px; width: 100%; background:url('/images/quote.png') no-repeat; background-size: 60px 51px; background-position: 50% 135px;}
 
 .section--testimonials .indicator--item{position: relative; text-align: center;}
 .section--testimonials .indicator--item .inner{padding : 0 98px 0 80px; box-sizing: border-box;}
 .section--testimonials .indicator--item p {margin-top: 230px; font-family: 'Rufina', serif; font-size:18px; font-weight: 700; line-height: 2em; color:#263a41;}
-.section--testimonials .indicator--item .executive--photo{overflow: hidden; margin : 42px auto 0; width: 76px; height:76px; border-radius: 50%; background: #000;}
-.section--testimonials .indicator--item .executive--photo img{width: 100%;}
+.section--testimonials .indicator--item .executive--photo{overflow: hidden; margin : 42px auto 0; width: 76px; height:76px; border-radius: 50%; background: url(../images/manager.jpg)no-repeat 50% 10%;}
 .section--testimonials .indicator--item .executive--name{display:inline-block; margin-top:24px; font-size:15px; font-weight: 400; line-height: 2em; color:#263a41;}
 .section--testimonials .indicator--item .executive--name em{font-family: 'Rufina', serif; font-size:22px; font-weight: 400;}
 
@@ -98,12 +95,11 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 
 /* 7. appointment table */
 .section--reserved{margin-top:215px; height: 642px; background: #fff9f8;}
-.section--reserved::before{content:''; position: absolute; top:0; left:0; width: 778px; height: inherit; background: #b3afa6;}
-.section--reserved .reserved__cont{float:right; padding-top:127px; width: 750px;}
-.section--reserved .reserved__cont form input, select{display:inline-block; margin: 0 20px 37px 0; padding-bottom:13px; width: 320px; height: 45px; color:#999; font-size: 12px; border-bottom:1px solid #d4d3d3; background: none;}
+.section--reserved .reserved__thumbnail{float:left; width:778px; height:100%; background:#b3afa6;}
+.section--reserved .reserved__cont{float:left; padding: 125px 0 0 98px; width: 750px;}
+.section--reserved .reserved__cont form input, select{display:inline-block; margin: 0 20px 37px 0; padding-bottom:13px; width: 320px; height: 45px; color:#999; font-size: 12px; border-bottom:1px solid #d4d3d3; background: none; box-sizing: border-box;}
 .section--reserved .reserved__cont .form--note{margin-top:74px; width: 652px; box-sizing: border-box; }
-.section--reserved .reserved__cont button{margin-top:3px;}
-
+.section--reserved .reserved__cont .btn__primary{margin:0;}
 
 /* 8.  section--blog */
 .section--blog article{height:610px;}
@@ -124,11 +120,6 @@ header nav ul li a{display: block; font-weight: 500; font-size: 14px; line-heigh
 
 .section--contact .contact__cont .visit--info li p{margin-left:30px; font-size:14px; line-height: 2em; text-align: left; color:#888;}
 
-
-
-
-
-.section--contact .contact__cont .visit--form {}
 .section--contact .contact__cont .visit--form button{margin-top:30px; margin-left:0;}
 .section--contact .contact__cont .visit--form input{margin-bottom:20px; padding-left: 20px; width: 554px; height: 50px; color:#999; border: 1px solid #e3e6ea;}
 .section--contact .contact__cont .visit--form .input--board{width: 100%; height: 150px; padding : 26px 20px 88px; box-sizing: border-box;}
@@ -140,34 +131,32 @@ footer .inner{max-width: 1140px; margin:0 auto; padding-top:100px; text-align: c
 footer .footer__logo{margin: 0 auto; width: 108px; height:78px; text-indent: -9999px;}
 footer .footer__logo a{display:block; width: 100%; height:100%; background: url(../images/footer_logo.png)no-repeat;}
 
-footer .inner .footer__nav{margin-top: 45px;}
-footer .inner .footer__nav ul {display: inline-block;}
-footer .inner .footer__nav ul li{float:left; display:inline-block; margin-right:62px;}
-footer .inner .footer__nav ul li a{display:block; font-weight: 500; color:#263a41;}
-footer .inner .footer__nav ul li:hover a{color: #ff817e; transition: .3s;}
-footer .inner .footer__nav ul li:last-child{margin-right: 0;}
+footer .inner .footer__nav--bar{margin: 0 auto; width:530px;}
+footer .inner .footer__nav--bar .nav--bar{margin-top: 45px; justify-content: space-between;}
+footer .inner .footer__nav--bar .nav--bar li a{font-size: 15px; line-height: 1em;}
 
-footer .footer--sns{}
 footer .footer--sns ul{display: inline-block; margin-top: 45px;}
 footer .footer--sns ul li{position: relative; float:left; margin: 0 14px;}
 footer .footer--sns ul li::before{position:absolute; left: 28px; content: ''; width: 1px; height:16px; background: #b1b4bb;}
 footer .footer--sns ul li:last-child::before{display: none;}
-footer .footer--sns ul li a{display:block; width: 14px; height: 14px; background: url(../images/sns.png)no-repeat; text-indent: -9999px;}
+
+footer .footer--sns ul li a{display:block; width: 15px; height: 15px; background: url(../images/sns_off.png)no-repeat; text-indent: -9999px;}
 footer .footer--sns .facebook a{background-position-x: 0; }
 footer .footer--sns .twitter a{background-position-x: -35px; }
 footer .footer--sns .instagram a{background-position-x: -81px; }
 footer .footer--sns .vingle a{background-position-x: -126px; }
 
+footer .footer--sns ul li:hover a{background: url(../images/sns_on.png)no-repeat;}
+footer .footer--sns .facebook:hover a{background-position-x: 0;}
+footer .footer--sns .twitter:hover a{background-position-x: -35px; }
+footer .footer--sns .instagram:hover a{background-position-x: -81px; }
+footer .footer--sns .vingle:hover a{background-position-x: -126px; }
+
 footer p{margin-top:48px; font-size: 13px; text-transform: uppercase; color:#888;}
 footer p em{color: #ff817e;}
 
 /*
-
 - display: flex, table, grid 사용
 - font-family도 class로
 - 가상요소로 이미지? or background
-
-1. font-family도 별도 class 가능?
-flex 또한
-
 */
