@@ -10,7 +10,7 @@ header nav ul {padding: 74px 0 0 214px;}
 header nav ul li {margin-right: 49px;}
 
 /* 1. section--banner */
-.section--banner {margin-top: 190px;}
+.section--banner {padding-top:190px; background: url(../images/bg_01.png)no-repeat left bottom; background-size: 239px 533px;}
 .section--banner .inner {text-align: left;}
 .section--banner .title {font-family: 'Rufina', serif;}
 .section--banner .title strong {font-weight: 400; color: #ff817e; line-height: 2em; letter-spacing: 1.5px; text-transform: uppercase;}
