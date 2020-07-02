@@ -1,20 +1,20 @@
 $(function(){
     //section--feature
-    var $featureCont = $('.feature__cont'),
-        $featureContLi = $featureCont.find('ul > li');
+    // var $featureCont = $('.feature__cont'),
+    //     $featureContLi = $featureCont.find('ul > li');
 
-        $featureContLi.each(function(i){
-            // for(var i = 0; i <= $featureContLi.length; i++);;
-            $(this).mouseenter(function(){
-                $featureContLi.removeClass('feature__block');
-                $featureContLi.eq(i).addClass('feature__block').animate({},3000);
-                $featureContLi.eq(i).find(' > span').css("display", "block");
-            })
-            $(this).mouseleave(function(i){
-                $featureContLi.removeClass('feature__block');
-                $featureContLi.find(' > span').css("display", "none");
-            });
-        });
+    //     $featureContLi.each(function(i){
+    //         // for(var i = 0; i <= $featureContLi.length; i++);;
+    //         $(this).mouseenter(function(){
+    //             $featureContLi.removeClass('feature__block');
+    //             $featureContLi.eq(i).addClass('feature__block').animate({},3000);
+    //             $featureContLi.eq(i).find(' > span').css("display", "block");
+    //         })
+    //         $(this).mouseleave(function(i){
+    //             $featureContLi.removeClass('feature__block');
+    //             $featureContLi.find(' > span').css("display", "none");
+    //         });
+    //     });
 
     // section--team
     var $_maNager = $('.manager--profile');

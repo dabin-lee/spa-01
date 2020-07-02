@@ -22,8 +22,6 @@ header .inner, section .inner {max-width:1140px; height:auto; margin: 0 auto; te
 /* COMMON - button */
 .btn__primary {display: block; width: 170px; height: 50px; margin: 0 auto; border: none; border-radius: 25px; background: #ff817e; color: #fff; text-align: center; cursor: pointer; outline: none; box-sizing: border-box;}
 
-/* FLEXIBLE BOX */
-.align__inline--flex {display: flex;}
 
 /* tiles */
 .tiles {display: flex; justify-content: space-between; margin-top:87px;}
@@ -37,9 +35,11 @@ header .inner, section .inner {max-width:1140px; height:auto; margin: 0 auto; te
 .tiles article button {margin-top: 30px;}
 .tiles figcaption strong {margin-top: 28px;}
 
-/* tiles - btn */
-.tiles .btn__primary {background: #30383b;}
+/* btn - hover */
+.btn__primary {background: #30383b;}
+.btn__primary:hover {background: #ff817e; transition: .3s;}
 
 /* nav - hover */
+.nav--bar{display:flex;}
 .nav--bar li a {display: block; font-weight: 500; font-size: 14px; line-height: 2em;  color:#263a41;}
 .nav--bar li:hover a {color: #ff817e; transition: .3s;}
