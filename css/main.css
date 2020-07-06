@@ -57,7 +57,7 @@ header nav ul li {margin-right: 49px;}
 .section--testimonials .indicator--item .executive--name em {font-family: 'Rufina', serif; font-size: 22px; font-weight: 400;}
 .section--testimonials .slider__indicator--btn {display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 137px; left: 50%; width: 85px; transform: translateX(-50%);}
 .section--testimonials .slider__indicator--btn li {width: 10px; height: 10px; border-radius: 50%; background-color: #ffc3c2; cursor: pointer;}
-.section--testimonials .slider__indicator--btn li:hover {background-color: #ff817e; transition: .3s;}
+.section--testimonials .slider__indicator--btn .indicator--on {background-color: #ff817e; transition: .3s;}
 
 /* 6. section--Team */
 .section--team .team__cont .manager--profile {position: relative; width: 360px; height: 500px;}
