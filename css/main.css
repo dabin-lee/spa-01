@@ -17,14 +17,16 @@ header nav ul li {margin-right: 49px;}
 .section--banner .title h2 {margin-top: 20px; font-weight: 700; font-size: 60px; line-height: 1.3em; color: #000;}
 .section--banner .title p {margin-top: 48px; font-family: 'Roboto', sans-serif; font-size: 15px; line-height: 2em; color: #000;}
 .section--banner .banner__btn {display:flex; margin-top: 58px;}
-.section--banner .btn--submit {width: 170px; height: 50px; margin-right: 56px; border: none; background: #ff817e; font-weight: 500; color: #fff; cursor: pointer;}
+.section--banner .btn--submit {width: 170px; height: 50px; margin-right: 56px; border: none; background: #30383b; font-weight: 500; color: #fff; cursor: pointer;}
+.section--banner .btn--submit:hover {background: #ff817e; transition: .3s;}
 .section--banner .btn--submit span {display: inline-block; width: 100%; padding-left: 25px; font-size: 13px; text-align: left; box-sizing: border-box;}
 .section--banner .banner__btn em {position: relative;}
 .section--banner .banner__btn em::before {position: absolute; top: 50%; right: -15px; width: 11px; height: 1px; background: #fff; content: ''; }
 .section--banner .banner__btn em::after {position: absolute; top: 36%; right: -15px; width: 6px; height: 6px; border-top: 1px solid #fff; border-right: 1px solid #fff; transform: rotate(45deg); content: ''; }
 .section--banner .banner__summary--play {display: block; width: 170px; height: 50px; font-size: 15px; font-weight: 500; line-height: 3.2em; cursor: pointer;}
 .section--banner .banner__summary--play .btn--play {float:left; position: relative; margin-right: 14px; width: 50px; height: 50px; border-radius: 50%; background: #fcf5ee; box-sizing: border-box;}
-.section--banner .banner__summary--play .btn--play::after {position: absolute; top: 30%; left: 45%; transform: rotate(90deg); height: 10px; border-bottom: 10px solid #ff817e; border-right: 10px solid transparent; border-left: 10px solid  transparent; content: '';}
+.section--banner .banner__summary--play .btn--play::after {position: absolute; top: 30%; left: 45%; transform: rotate(90deg); height: 10px; border-bottom: 10px solid #30383b; border-right: 10px solid transparent; border-left: 10px solid  transparent; content: '';}
+.section--banner .banner__summary--play:hover .btn--play::after {border-bottom: 10px solid #ff817e; transition: .3s;}
 
 /* 2. section--about */
 .section--about {padding-top: 370px; background: url(../images/bg_04.png)no-repeat, url(../images/bg_03.png)no-repeat; background-size: 130px 118px, 88px 75px; background-position: 310px 245px, 1435px 411px; }
@@ -48,7 +50,7 @@ header nav ul li {margin-right: 49px;}
 /* 5. section--testimonials */
 .section--testimonials {overflow-x:hidden; position: relative; height: 713px; margin-top: 140px; background: #fff9f8;}
 .section--testimonials .article__group--testimonials {position: absolute; width: 100%; height: 100%;}
-.section--testimonials .indicator--article {position: absolute; width: 100%; height: 713px; background: url('/images/quote.png') no-repeat; background-size: 60px 51px; background-position: 50% 135px;}
+.section--testimonials .indicator--article {position: absolute; width: 100%; height: 713px; background: url(../images/quote.png) no-repeat; background-size: 60px 51px; background-position: 50% 135px;}
 .section--testimonials .indicator--item {position: relative; text-align: center;}
 .section--testimonials .indicator--item .inner {padding: 0 98px 0 80px; box-sizing: border-box;}
 .section--testimonials .indicator--item p {margin-top: 230px; font-family: 'Rufina', serif; font-size: 18px; font-weight: 700; line-height: 2em; color: #263a41;}
@@ -132,25 +134,57 @@ footer .footer__logo a {display: block; width: 100%; height: 100%; background: u
 footer .inner .footer__nav--bar {width: 530px; margin: 0 auto;}
 footer .inner .footer__nav--bar .nav--bar {margin-top: 45px; justify-content: space-between;}
 footer .inner .footer__nav--bar .nav--bar li a {font-size: 15px; line-height: 1em;}
-footer .footer--sns ul {display: inline-block; margin-top: 45px;}
-footer .footer--sns ul li {float: left; position: relative; margin: 0 14px;}
-footer .footer--sns ul li::before {position: absolute; left: 28px; width: 1px; height: 16px; background: #b1b4bb; content: '';}
-footer .footer--sns ul li:last-child::before {display: none;}
-footer .footer--sns ul li a {display: block; width: 15px; height: 15px; background: url(../images/sns_off.png)no-repeat; text-indent: -9999px;}
-footer .footer--sns .facebook a {background-position-x: 0;}
-footer .footer--sns .twitter a {background-position-x: -35px;}
-footer .footer--sns .instagram a {background-position-x: -81px;}
-footer .footer--sns .vingle a {background-position-x: -126px;}
-footer .footer--sns ul li:hover a {background: url(../images/sns_on.png)no-repeat;}
-footer .footer--sns .facebook:hover a {background-position-x: 0;}
-footer .footer--sns .twitter:hover a {background-position-x: -35px;}
-footer .footer--sns .instagram:hover a {background-position-x: -81px;}
-footer .footer--sns .vingle:hover a {background-position-x: -126px;}
+
+footer .footer__list--sns ul{display: flex; justify-content: center; width:100%; margin-top: 30px;}
+footer .footer__list--sns ul li {position: relative; margin: 0 15px;}
+footer .footer__list--sns ul .facebook {margin: 0 14px 0 13px;}
+footer .footer__list--sns ul li::before {position: absolute; left: 28px; width: 1px; height: 16px; background: #b1b4bb; content: '';}
+footer .footer__list--sns ul .facebook::before {left: 21px;}
+footer .footer__list--sns ul li:last-child::before {display: none;}
+footer .footer__list--sns ul li a {display: block; text-indent: -9999px;}
+
+    /* footer - type01 */
+    footer .footer__list--sns .footer--sns__type01 {margin-top: 45px;}
+    footer .footer__list--sns .footer--sns__type01 li a {background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__list--sns .footer--sns__type01 .facebook a {width:7px; height:14px; background-position-x: 0;}
+    footer .footer__list--sns .footer--sns__type01 .twitter a {width:13px; height:11px; background-position-x: -50px;}
+    footer .footer__list--sns .footer--sns__type01 .instagram a {width:13px; height:14px; background-position-x: -100px;}
+    footer .footer__list--sns .footer--sns__type01 .vingle a {width:13px; height:11px; background-position-x: -150px;}
+
+    footer .footer__list--sns .footer--sns__type01 li:hover a {background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__list--sns .footer--sns__type01 .facebook:hover a {width:7px; height:14px; background-position: 0 -50px;}
+    footer .footer__list--sns .footer--sns__type01 .twitter:hover a {width:13px; height:11px; background-position: -50px -50px;}
+    footer .footer__list--sns .footer--sns__type01 .instagram:hover a {width:13px; height:14px; background-position: -100px -50px;}
+    footer .footer__list--sns .footer--sns__type01 .vingle:hover a {width:13px; height:11px; background-position: -150px -50px;}
+
+    /* footer - type02 */
+    footer .footer__list--sns .footer--sns__type02 li::before {left: 27px;}
+    footer .footer__list--sns .footer--sns__type02 li a{position:relative; width:13px; height:14px;}
+    footer .footer__list--sns .footer--sns__type02 li a::before{content: ''; position: absolute; top:0; left:0; width:13px; height:14px; background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__list--sns .footer--sns__type02 .facebook a::before{background-position-x: 0;}
+    footer .footer__list--sns .footer--sns__type02 .twitter a::before{background-position-x: -50px;}
+    footer .footer__list--sns .footer--sns__type02 .instagram a::before{background-position-x: -100px;}
+    footer .footer__list--sns .footer--sns__type02 .vingle a::before{background-position-x: -150px;}
+
+    footer .footer__list--sns .footer--sns__type02 li:hover a::before{background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__list--sns .footer--sns__type02 .facebook:hover a::before{background-position: 0 -50px;}
+    footer .footer__list--sns .footer--sns__type02 .twitter:hover a::before{background-position: -50px -50px;}
+    footer .footer__list--sns .footer--sns__type02 .instagram:hover a::before{background-position: -100px -50px;}
+    footer .footer__list--sns .footer--sns__type02 .vingle:hover a::before{background-position: -150px -50px;}
+
+    /* footer - type03 */
+    footer .footer__list--sns .footer--sns__type03 li::before {left: 27px;}
+    footer .footer__list--sns .footer--sns__type03 li a {width:13px; height:14px; background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__list--sns .footer--sns__type03 .facebook a {background-position-x: 0;}
+    footer .footer__list--sns .footer--sns__type03 .twitter a {background-position-x: -50px;}
+    footer .footer__list--sns .footer--sns__type03 .instagram a {background-position-x: -100px;}
+    footer .footer__list--sns .footer--sns__type03 .vingle a {background-position-x: -150px;}
+
+    footer .footer__list--sns .footer--sns__type03 li:hover a {background: url(../images/sns_sprite_ex.png)no-repeat;}
+    footer .footer__list--sns .footer--sns__type03 .facebook:hover a {background-position: 0 -50px;}
+    footer .footer__list--sns .footer--sns__type03 .twitter:hover a {background-position: -50px -50px;}
+    footer .footer__list--sns .footer--sns__type03 .instagram:hover a {background-position: -100px -50px;}
+    footer .footer__list--sns .footer--sns__type03 .vingle:hover a {background-position: -150px -50px;}
+
 footer p {margin-top: 48px; font-size: 13px; text-transform: uppercase; color: #888;}
 footer p em {color: #ff817e;}
-
-/*
-- display: flex, table, grid 사용
-- font-family도 class로
-- 가상요소로 이미지? or background
-*/

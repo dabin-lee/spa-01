@@ -1,6 +1,6 @@
 /* COOMON*/
 html, body {height:100%;}
-.body__wrapper {font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 15px; color: #333; box-sizing: border-box;}
+.body__wrapper {min-width:1530px; font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 15px; color: #333; box-sizing: border-box;}
 
 /* common - float clearfix */
 .clearfix::after {display: block; clear: both; content:'';}
