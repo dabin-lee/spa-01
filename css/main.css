@@ -100,7 +100,8 @@ header nav ul li {margin-right: 49px;}
     box-sizing: border-box;
     }
     .section--reserved .reserved--wrap .reserved__cont input:nth-child(even){margin-right: 0;}
-
+.section--reserved .reserved--wrap .reserved__cont .reseve--date{background : url(../images/date.png)no-repeat 304px 9px;}
+.section--reserved .reserved--wrap .reserved__cont .reseve--time{background : url(../images/time.png)no-repeat 304px 9px;}
 .section--reserved .reserved--wrap .reserved__cont .form--note {width: 652px; margin-top: 74px; margin-right: 0; box-sizing: border-box;}
 .section--reserved .reserved--wrap .reserved__cont .btn__primary {margin: 0;}
 
@@ -116,11 +117,7 @@ header nav ul li {margin-right: 49px;}
 .section--contact .contact__cont {display: flex; height: 457px; margin-top: 87px; padding: 87px 90px 0 90px;}
 .section--contact .contact__cont .visit--info {margin-right: 128px;}
 .section--contact .contact__cont .visit--info li {display: flex; position: relative; width: 262px; margin-bottom: 50px;}
-.section--contact .contact__cont .visit--info li:last-child {margin-bottom: 0;}
-.section--contact .contact__cont .visit--info li::before {display: inline-block; width: 50px; height: 50px; border-radius: 50%; background: #ff817e; content: '';}
-.section--contact .contact__cont .visit--info li::after {position: absolute; width: 50px; height: 50px; background: url(../images/visit--info__icon.png)16px 15px no-repeat; content: '';}
-.section--contact .contact__cont .visit--info li:nth-child(2)::after {background-position-y: -83px;}
-.section--contact .contact__cont .visit--info li:nth-child(3)::after {background-position-y: -183px;}
+.section--contact .contact__cont .visit--info li span {display: inline-block; width: 50px; height: 50px; border-radius: 50%; background: #ff817e url(../images/visit--info__icon.png)16px 15px no-repeat; content: '';}
 .section--contact .contact__cont .visit--info li p {margin-left: 30px; font-size: 14px; line-height: 2em; text-align: left; color: #888;}
 .section--contact .contact__cont .visit--form button {margin-top: 30px; margin-left: 0;}
 .section--contact .contact__cont .visit--form input {width: 554px; height: 50px; margin-bottom: 20px; padding-left: 20px; border: 1px solid #e3e6ea; color: #999;}

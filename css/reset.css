@@ -24,3 +24,7 @@ h1, h2, h3, h4, h5, h6{}
 ol, ul {  list-style: none; }
 img { border: 0; line-height:0;}
 a { color: #333; text-decoration: none; }
+
+
+input[type='text'] { -webkit-appearance:none; appearance:none; box-shadow:none; border-radius:0; }
+input[type='date'] { display: none; -webkit-appearance:none; appearance:none; box-shadow:none;}
