@@ -19,8 +19,17 @@ header .inner, section .inner {max-width:1140px; height:auto; margin: 0 auto; te
 .title h2 + p {margin-top:18px;}
 .title + button {margin-top: 74px;}
 
+
 /* COMMON - button */
-.btn__primary {display: block; width: 170px; height: 50px; margin: 0 auto; border: none; border-radius: 25px; background: #ff817e; color: #fff; text-align: center; cursor: pointer; outline: none; box-sizing: border-box;}
+.btn__primary, .btn__primary--pink {display: block; width: 170px; height: 50px; margin: 0 auto; border: none; border-radius: 25px; background: #ff817e; color: #fff; text-align: center; cursor: pointer; outline: none; box-sizing: border-box;}
+
+
+/* btn - hover */
+.btn__primary {background: #30383b;}
+.btn__primary:hover {background: #ff817e; transition: .3s;}
+.btn__primary--pink {background: #ff817e; color:#fff;}
+.btn__primary--pink:hover {color:#000; transition: .3s;}
+
 
 
 /* tiles */
@@ -35,9 +44,6 @@ header .inner, section .inner {max-width:1140px; height:auto; margin: 0 auto; te
 .tiles article button {margin-top: 30px;}
 .tiles figcaption strong {margin-top: 28px;}
 
-/* btn - hover */
-.btn__primary {background: #30383b;}
-.btn__primary:hover {background: #ff817e; transition: .3s;}
 
 /* nav - hover */
 .nav--bar{display:flex;}

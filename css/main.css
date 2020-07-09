@@ -17,16 +17,19 @@ header nav ul li {margin-right: 49px;}
 .section--banner .title h2 {margin-top: 20px; font-weight: 700; font-size: 60px; line-height: 1.3em; color: #000;}
 .section--banner .title p {margin-top: 48px; font-family: 'Roboto', sans-serif; font-size: 15px; line-height: 2em; color: #000;}
 .section--banner .banner__btn {display:flex; margin-top: 58px;}
-.section--banner .btn--submit {width: 170px; height: 50px; margin-right: 56px; border: none; background: #30383b; font-weight: 500; color: #fff; cursor: pointer;}
-.section--banner .btn--submit:hover {background: #ff817e; transition: .3s;}
+.section--banner .btn--submit {width: 170px; height: 50px; margin-right: 56px; border: none; background: #ff817e; font-weight: 500; color: #fff; cursor: pointer;}
+.section--banner .btn--submit:hover {color: #000; transition: .3s;}
 .section--banner .btn--submit span {display: inline-block; width: 100%; padding-left: 25px; font-size: 13px; text-align: left; box-sizing: border-box;}
 .section--banner .banner__btn em {position: relative;}
 .section--banner .banner__btn em::before {position: absolute; top: 50%; right: -15px; width: 11px; height: 1px; background: #fff; content: ''; }
 .section--banner .banner__btn em::after {position: absolute; top: 36%; right: -15px; width: 6px; height: 6px; border-top: 1px solid #fff; border-right: 1px solid #fff; transform: rotate(45deg); content: ''; }
+.section--banner .btn--submit:hover em::before {background: #000; transition: .3s;}
+.section--banner .btn--submit:hover em::after {border-top: 1px solid #000; border-right: 1px solid #000; transition: .3s;}
+
 .section--banner .banner__summary--play {display: block; width: 170px; height: 50px; font-size: 15px; font-weight: 500; line-height: 3.2em; cursor: pointer;}
 .section--banner .banner__summary--play .btn--play {float:left; position: relative; margin-right: 14px; width: 50px; height: 50px; border-radius: 50%; background: #fcf5ee; box-sizing: border-box;}
-.section--banner .banner__summary--play .btn--play::after {position: absolute; top: 30%; left: 45%; transform: rotate(90deg); height: 10px; border-bottom: 10px solid #30383b; border-right: 10px solid transparent; border-left: 10px solid  transparent; content: '';}
-.section--banner .banner__summary--play:hover .btn--play::after {border-bottom: 10px solid #ff817e; transition: .3s;}
+.section--banner .banner__summary--play .btn--play::after {position: absolute; top: 30%; left: 45%; transform: rotate(90deg); height: 10px; border-bottom: 10px solid #ff817e; border-right: 10px solid transparent; border-left: 10px solid  transparent; content: '';}
+.section--banner .banner__summary--play:hover .btn--play::after {border-bottom: 10px solid #30383b; transition: .3s;}
 
 /* 2. section--about */
 .section--about {padding-top: 370px; background: url(../images/bg_04.png)no-repeat, url(../images/bg_03.png)no-repeat; background-size: 130px 118px, 88px 75px; background-position: 310px 245px, 1435px 411px; }
@@ -103,7 +106,7 @@ header nav ul li {margin-right: 49px;}
 .section--reserved .reserved--wrap .reserved__cont .reseve--date{background : url(../images/date.png)no-repeat 304px 9px;}
 .section--reserved .reserved--wrap .reserved__cont .reseve--time{background : url(../images/time.png)no-repeat 304px 9px;}
 .section--reserved .reserved--wrap .reserved__cont .form--note {width: 652px; margin-top: 74px; margin-right: 0; box-sizing: border-box;}
-.section--reserved .reserved--wrap .reserved__cont .btn__primary {margin: 0;}
+.section--reserved .reserved--wrap .reserved__cont .btn__primary--pink {margin: 0;}
 
 
 
@@ -155,7 +158,10 @@ footer .footer__list--sns ul li a {display: block; text-indent: -9999px;}
     footer .footer__list--sns .footer--sns__type01 .vingle:hover a {width:13px; height:11px; background-position: -150px -50px;}
 
     /* footer - type02 */
-    footer .footer__list--sns .footer--sns__type02 li::before {left: 27px;}
+
+    footer .footer__list--sns .footer--sns__type02 .facebook {margin: 0 8px 0 13px;}
+    footer .footer__list--sns .footer--sns__type02 li::before {left: 28px;}
+    footer .footer__list--sns .footer--sns__type02 .facebook::before {left: 21px;}
     footer .footer__list--sns .footer--sns__type02 li a{position:relative; width:13px; height:14px;}
     footer .footer__list--sns .footer--sns__type02 li a::before{content: ''; position: absolute; top:0; left:0; width:13px; height:14px; background: url(../images/sns_sprite_ex.png)no-repeat;}
     footer .footer__list--sns .footer--sns__type02 .facebook a::before{background-position-x: 0;}
@@ -170,7 +176,10 @@ footer .footer__list--sns ul li a {display: block; text-indent: -9999px;}
     footer .footer__list--sns .footer--sns__type02 .vingle:hover a::before{background-position: -150px -50px;}
 
     /* footer - type03 */
-    footer .footer__list--sns .footer--sns__type03 li::before {left: 27px;}
+    footer .footer__list--sns .footer--sns__type03 .facebook {margin: 0 8px 0 13px;}
+    footer .footer__list--sns .footer--sns__type03 li::before {left: 28px;}
+    footer .footer__list--sns .footer--sns__type03 .facebook::before {left: 21px;}
+
     footer .footer__list--sns .footer--sns__type03 li a {width:13px; height:14px; background: url(../images/sns_sprite_ex.png)no-repeat;}
     footer .footer__list--sns .footer--sns__type03 .facebook a {background-position-x: 0;}
     footer .footer__list--sns .footer--sns__type03 .twitter a {background-position-x: -50px;}
