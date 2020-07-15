@@ -63,6 +63,15 @@ header nav ul li {margin-right: 49px;}
 .section--testimonials .slider__indicator--btn {display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 137px; left: 50%; width: 85px; transform: translateX(-50%);}
 .section--testimonials .slider__indicator--btn li {width: 10px; height: 10px; border-radius: 50%; background-color: #ffc3c2; cursor: pointer;}
 .section--testimonials .slider__indicator--btn .indicator--on {background-color: #ff817e; transition: .3s;}
+.section--testimonials .slider__arrow {display: flex;align-items: center;width:100%;height:100%;}
+
+.section--testimonials .slider__arrow--inner {width: 1200px; margin: 0 auto; z-index: 9999;}
+.section--testimonials .slider__arrow a {display: inline-block; width: 25px; height: 46px; background-image: url(../images/arrow_btn.png); background-size: cover; cursor:pointer;}
+.section--testimonials .slider__arrow .arrow--prevBtn {float: left;}
+.section--testimonials .slider__arrow .arrow--nextBtn {float: right; background-position-x: 27px;}
+
+
+
 
 /* 6. section--Team */
 .section--team .team__cont .manager--profile {position: relative; width: 360px; height: 500px;}

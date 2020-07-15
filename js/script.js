@@ -43,7 +43,30 @@ $(function(){
                         goToslide(idx);
                     }
                 })
+            });
+
+
+
+            var $prevBtn = $('.arrow--prevBtn'),
+                $nextBtn = $('.arrow--nextBtn'),
+                cnt = 0;
+
+
+
+
+            $prevBtn.on({
+                click  : function(){
+                    $slideGroup.css({left:  (i * 100) + '%'});
+                }
+            });
+            $nextBtn.on({
+                click : function(){
+                    $slideGroup.css({left:  (i * -100) + '%'});
+                }
             })
+
+
+
 
 
         // datepicker, timepicker
