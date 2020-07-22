@@ -18,6 +18,11 @@ label,img,input,select,textarea,button{
 	outline: none;
 }
 
+button:focus, a:focus, input:focus, select:focus{
+	outline:solid 1px #dddddd;
+	background: yellow;
+}
+
 
 /* body {font-size:12px; font-family: arial, sans-serif;} */
 h1, h2, h3, h4, h5, h6{}

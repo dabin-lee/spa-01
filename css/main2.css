@@ -62,14 +62,13 @@ header nav ul li {margin-right: 49px;}
 .section--testimonials .indicator--item .executive--name em {font-family: 'Rufina', serif; font-size: 22px; font-weight: 400;}
 .section--testimonials .slider__indicator--btn {display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 137px; left: 50%; width: 85px; transform: translateX(-50%);}
 .section--testimonials .slider__indicator--btn li {width: 10px; height: 10px; border-radius: 50%; background-color: #ffc3c2; cursor: pointer;}
-.section--testimonials .slider__indicator--btn li a{overflow: hidden; display: block; width:10px; height:10px; text-indent: -9999px;}
 .section--testimonials .slider__indicator--btn .indicator--on {background-color: #ff817e; transition: .3s;}
 .section--testimonials .slider__arrow {display: flex;align-items: center;width:100%;height:100%;}
 
 .section--testimonials .slider__arrow--inner {width: 1200px; margin: 0 auto; z-index: 9999;}
-.section--testimonials .slider__arrow a {display: inline-block; width: 25px; height: 46px; text-indent: -9999px; background-image: url(../images/arrow_btn.png); background-size: cover; cursor:pointer;}
+.section--testimonials .slider__arrow a {display: inline-block; width: 25px; height: 46px; background-image: url(../images/arrow_btn.png); background-size: cover; cursor:pointer;}
 .section--testimonials .slider__arrow .arrow--prevBtn {float: left;}
-.section--testimonials .slider__arrow .arrow--nextBtn {float: right; background-position-x: 25px;}
+.section--testimonials .slider__arrow .arrow--nextBtn {float: right; background-position-x: 27px;}
 
 
 
@@ -78,25 +77,21 @@ header nav ul li {margin-right: 49px;}
 .section--team .team__cont .manager--profile {position: relative; width: 360px; height: 500px;}
 .section--team .team__cont .manager--profile figure {width: 100%; height: 434px; background: #f1f1f1;}
 .section--team .team__cont .manager--profile figcaption {overflow:hidden; position: absolute; bottom: 0; width: 300px; height: 120px; margin: 0 30px; background: #fff;}
-
-/* on이 붙은 sns은 opacity : 1 */
-.section--team .team__cont figcaption {margin: 0 auto; transition: ease-in .3s; border: 1px solid #ddd; }
-.section--team .team__cont .on figcaption {height:170; box-shadow: 0 0 20px 3px rgba(0,0,0,.1);}
-.section--team .team__cont .on figcaption .btn__sns {opacity: 1;}
-
-
-.section--team .team__cont .btn__sns ul {display: inline-block; margin-top: 15px;}
-.section--team .team__cont .btn__sns ul li {float: left; margin-right: 42px;}
-.section--team .team__cont .btn__sns ul li:last-child {margin-right: 0;}
-
-.section--team .team__cont .btn__sns li a {display: block; width: 30px; height: 32px; background: url(../images/team_sns.png)0 no-repeat; text-indent: -9999px; cursor: pointer;}
-.section--team .team__cont .btn__sns li:nth-child(2) a {background-position-x: -43px;}
-.section--team .team__cont .btn__sns li:nth-child(3) a {background-position-x: -88px;}
-.section--team .team__cont .btn__sns li:nth-child(4) a {background-position-x: -133px;}
-.section--team .team__cont .btn__sns li:hover a {display: block; width: 30px; height: 32px; background: url(../images/team_sns_hover.png)0 no-repeat; text-indent: -9999px; transition: .3s;}
-.section--team .team__cont .btn__sns li:nth-child(2):hover a {background-position-x: -43px;}
-.section--team .team__cont .btn__sns li:nth-child(3):hover a {background-position-x: -88px;}
-.section--team .team__cont .btn__sns li:nth-child(4):hover a {background-position-x: -133px;}
+.section--team .team__cont figcaption {margin: 0 auto; transition: ease-in .3s;}
+.section--team .team__cont figcaption .btn__sns {opacity: 0;}
+.section--team .team__cont .over figcaption {height: 170px; box-shadow: 0 0 20px 3px rgba(0,0,0,.1); transition: .5s;}
+.section--team .team__cont .over .btn__sns {opacity: 1; margin-top: 12px;}
+.section--team .team__cont .over .btn__sns ul {display: inline-block;}
+.section--team .team__cont .over .btn__sns li {float: left; margin-right: 42px;}
+.section--team .team__cont .over .btn__sns li:last-child {margin-right: 0;}
+.section--team .team__cont .over .btn__sns li a {display: block; width: 30px; height: 32px; background: url(../images/team_sns.png)0 no-repeat; text-indent: -9999px; cursor: pointer;}
+.section--team .team__cont .over .btn__sns li:nth-child(2) a {background-position-x: -43px;}
+.section--team .team__cont .over .btn__sns li:nth-child(3) a {background-position-x: -88px;}
+.section--team .team__cont .over .btn__sns li:nth-child(4) a {background-position-x: -133px;}
+.section--team .team__cont .over .btn__sns li:hover a {display: block; width: 30px; height: 32px; background: url(../images/team_sns_hover.png)0 no-repeat; text-indent: -9999px; transition: .3s;}
+.section--team .team__cont .over .btn__sns li:nth-child(2):hover a {background-position-x: -43px;}
+.section--team .team__cont .over .btn__sns li:nth-child(3):hover a {background-position-x: -88px;}
+.section--team .team__cont .over .btn__sns li:nth-child(4):hover a {background-position-x: -133px;}
 
 
 /* 7. appointment table */
