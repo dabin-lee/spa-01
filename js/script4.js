@@ -4,45 +4,54 @@ $(function(){
         $maNagerProfile = $maNagerLi.find(' > figcaption'),
         $snsBtn = $maNagerProfile.find('.btn__sns'),
         $snsBtnDetails = $snsBtn.find('> ul > li'),
-        $snsBtnDetailsA = $snsBtn.find('> ul > li > a'),
+        $snsBtnDetailsA = $snsBtnDetails.find('> a'),
         $z_idx = 0;
 
-        $snsBtnDetailsA.each(function(e){
-            // console.log(e);
-            $(this).on({
-                keydown : function('Tab'){
-                    // $(this).attr('.$maNagerLi').
-                    alert('sese');
-                }
-                // ,blur, mouseleave : function(){
-                //     $(this).removeClass('on');
-                //     $snsBtnDetailsA.focusout();
-                // }
-            })
-        });
+        // $maNagerLi.each(function(e){
+        //     // console.log(e);
+        //     $(this).on({
+        //         focus, mouseenter : function(){
+        //             $(this).addClass('on');
+        //             if($snsBtnDetailsA.focus()){
+        //                 console.log('focus');
+        //             }
+        //         },blur, mouseleave : function(){
+        //             $maNagerProfile.eq(e).css({height:120});
+        //             $snsBtn.eq(e).css({opacity:1});
+
+        //             // $(this).removeClass('on');
+        //             $snsBtnDetailsA.blur();
+        //         }
+        //     })
+        // });
+
+
+
+
+
+
+
 
         $maNagerLi.each(function(e){
-            // console.log(e);
             $(this).on({
                 focus, mouseenter : function(){
                     $(this).addClass('on');
-                    if($snsBtnDetailsA.focusin())
-
-                        $snsBtn.eq().css({opacity:1});{
-                    }
                 },blur, mouseleave : function(){
                     $(this).removeClass('on');
-                    $snsBtnDetailsA.focusout();
                 }
             })
         });
 
 
-    /*
-    tab해서 li에 on이붙고 밑에 내용물들 업, tab키focus가 맞아짐
-    $banner = $listZone.find('ul.banner-list-inner li'),
-                    $details = $banner.find('.btn-article a'),
-    */
+        $snsBtnDetailsA.on({
+
+            focusin : function(i){
+                $maNagerLi.addClass('on');
+            },focusout :function(){
+                _thisParent.removeClass('on');
+            }
+        });
+
 
 
     // section--testimonials

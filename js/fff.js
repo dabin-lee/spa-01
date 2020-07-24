@@ -4,45 +4,37 @@ $(function(){
         $maNagerProfile = $maNagerLi.find(' > figcaption'),
         $snsBtn = $maNagerProfile.find('.btn__sns'),
         $snsBtnDetails = $snsBtn.find('> ul > li'),
-        $snsBtnDetailsA = $snsBtn.find('> ul > li > a'),
         $z_idx = 0;
 
-        $snsBtnDetailsA.each(function(e){
-            // console.log(e);
-            $(this).on({
-                keydown : function('Tab'){
-                    // $(this).attr('.$maNagerLi').
-                    alert('sese');
-                }
-                // ,blur, mouseleave : function(){
-                //     $(this).removeClass('on');
-                //     $snsBtnDetailsA.focusout();
-                // }
-            })
-        });
 
         $maNagerLi.each(function(e){
             // console.log(e);
             $(this).on({
                 focus, mouseenter : function(){
-                    $(this).addClass('on');
-                    if($snsBtnDetailsA.focusin())
-
-                        $snsBtn.eq().css({opacity:1});{
-                    }
+                    $maNagerProfile.eq(e).css({height:170});
+                    $snsBtn.eq(e).css({opacity:1});
+                    $snsBtnDetails.focus();
                 },blur, mouseleave : function(){
-                    $(this).removeClass('on');
-                    $snsBtnDetailsA.focusout();
+                    $maNagerProfile.eq(e).css({height:120});
+                    $snsBtn.eq(e).css({opacity:1});
+                    $snsBtnDetails.blur();
                 }
             })
         });
 
 
-    /*
-    tab해서 li에 on이붙고 밑에 내용물들 업, tab키focus가 맞아짐
-    $banner = $listZone.find('ul.banner-list-inner li'),
-                    $details = $banner.find('.btn-article a'),
-    */
+        $snsBtnDetails.on({
+            focus : function(){
+                var _this = $(this),
+                    _thisParent = _this.closest($maNagerProfile);
+                if(_thisParent.hasClass('on') == true){
+                    $maNagerProfile.removeClass('on');
+                }else{
+                    $maNagerProfile.addClass('on');
+                }
+            }
+        });
+
 
 
     // section--testimonials
