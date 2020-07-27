@@ -93,6 +93,9 @@ header nav ul li {margin-right: 49px;}
 .section--team .team__cont .on .btn__sns li:nth-child(3):hover a {background-position-x: -88px;}
 .section--team .team__cont .on .btn__sns li:nth-child(4):hover a {background-position-x: -133px;}
 
+figcaption:focus{
+    height: 170px;
+}
 
 /* 7. appointment table */
 .section--reserved {height: 642px; margin-top: 215px; background: #fff9f8; box-sizing: border-box;}

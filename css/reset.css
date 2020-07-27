@@ -18,7 +18,7 @@ label,img,input,select,textarea,button{
 	outline: none;
 }
 
-button:focus, a:focus, input:focus, select:focus{
+button:focus, a:focus, input:focus, select:focus, li:focus{
 	outline:solid 1px #dddddd;
 	background: yellow;
 }

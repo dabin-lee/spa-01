@@ -9,72 +9,52 @@ $(function(){
         $z_idx = 0;
 
 
-        // 마우스 오버, 리브
+        // 마우스 오버, 포커스 인
         $maNagerLi.on({
             mouseenter:	function(){
                 $(this).addClass('on');
                 $tabList.find('li').focus()
-                $tabList.find('li').eq().attr('tabIndex', 1);
+                $tabList.find('li').eq().attr('tabIndex', 0);
             },
             focus:	function(){  //키보드접근 focusin == focus    커보드 떠날 때 focusout == blur
-                console.log('ddd');
                 $(this).addClass('on');
-
-                $tabList.find('> li > a').each(function(e) {
-                        console.log(this);
-                        var tab = 0;
-                        $tabList.find('> li').each(function(e) {
-                            if(tab == 0){
-                                tab = 1;
-                                $(this).eq(e).attr('tabIndex', 0);
-                            }else{
-                                tab = 0;
-                                $(this).eq(e).removeAttr('tabIndex', 0);
-                            }
-                        });
-
-                });
-
             }
         });
 
+        // 마우스 리브 , 포커스 리브
         $maNagerLi.on({
             mouseleave:	function(){
                 $(this).removeClass('on');
             }
         });
 
-
-
-        // tab으로 슬라이드 업
-        // $tabList.find('li').each(function(e) {
-        //     var focusTrue = $maNagerLi.focusin();
-        //         if(focusTrue){
-        //             $(this).eq(e).attr('tabIndex', -1);
-        //             $(this).eq(e).focusin()
-        //             $(this).eq(e).css('color', 'red');
-        //         }else{
-        //             $(this).eq(e).focusout()
+        // 마지막 요소에 포커스가 없어지면 slide가 들어감
+        // $Tab.find(':last').each(function(){
+        //     // var tTab = $maNagerLi.find('.tablist > li > a:last');
+        //     $(this).on({
+        //         blur : function(){
+        //             $('.manager--profile').eq().removeClass('on');
         //         }
-        //     });
+        //     })
+        // })
 
-
-// 순서정리
-/*
-        figcaption이 170px up (addclass on)이 됐을때
-        tablist의 li들이 각각 focus를 받는다.
-*/
-
-
-        $tabList.find('li').each(function(e){
-                $(this).eq(e).on({
-                    mouseleave : function(){
-                        $(this).eq(e).attr('tabIndex', -1);
-                        $(this).eq(e).css('color', 'red');
-                        $(this).eq(e).focusin()
-                    }
-                })
-            });
+        function tabLast(){
+            var tot = 0;
+            var Tablast = $Tab.find(':last');
+            console.log(Tablast);
+            console.log(Tablast.length);
+            if(tot == 0){
+                tot = 1;
+                $maNagerLi.eq().hasClass('on');
+                console.log(tot);
+            }else{
+                tot = 0;
+                Tablast.focus();
+                $maNagerLi.eq().removeClass('on');
+                console.log(tot);
+            }
+        }
+        tabLast();
 
 
     // section--testimonials
