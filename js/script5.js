@@ -8,16 +8,22 @@ $(function(){
         $Tab = $tabList.find('> a'),
         $z_idx = 0;
 
-
+    console.log($Tab);
         // 마우스 오버, 포커스 인
         $maNagerLi.on({
             mouseenter:	function(){
                 $(this).addClass('on');
-                $tabList.find('li').focus()
+                $Tab.focus()
                 $tabList.find('li').eq().attr('tabIndex', 0);
             },
             focus:	function(){  //키보드접근 focusin == focus    커보드 떠날 때 focusout == blur
                 $(this).addClass('on');
+                $Tab.focus()
+            }
+        });
+        $snsBtn.on({
+            focus:	function(){
+                $Tab.focus()
             }
         });
 
@@ -25,36 +31,35 @@ $(function(){
         $maNagerLi.on({
             mouseleave:	function(){
                 $(this).removeClass('on');
+                $(this).find('.tablist > li > a').attr('tabindex', 0);
             }
         });
 
-        // 마지막 요소에 포커스가 없어지면 slide가 들어감
-        // $Tab.find(':last').each(function(){
-        //     // var tTab = $maNagerLi.find('.tablist > li > a:last');
-        //     $(this).on({
-        //         blur : function(){
-        //             $('.manager--profile').eq().removeClass('on');
-        //         }
-        //     })
-        // })
-
-        function tabLast(){
-            var tot = 0;
-            var Tablast = $Tab.find(':last');
-            console.log(Tablast);
-            console.log(Tablast.length);
-            if(tot == 0){
-                tot = 1;
-                $maNagerLi.eq().hasClass('on');
-                console.log(tot);
-            }else{
-                tot = 0;
-                Tablast.focus();
-                $maNagerLi.eq().removeClass('on');
-                console.log(tot);
+        $snsBtn.on({
+            blur:	function(){
+                $(this).removeClass('on');
             }
-        }
-        tabLast();
+        });
+
+
+        $maNagerLi.on({
+            focusout:	function(){
+                $(this).removeClass('on');
+                $(this).find('.tablist > li > a').attr('tabindex', 0);
+            }
+        });
+
+
+
+        $maNagerLi.on({
+            blur:	function(){
+                $Tab.focus(function(){
+                    alert('dadz');
+                    $(this).last().focus();
+                    $('.manager--profile').removeClass('on');
+                });
+            },
+        });
 
 
     // section--testimonials
@@ -128,13 +133,6 @@ $(function(){
                 }
             })
 
-            // var teamFigcaption = $('.figcaption');
-
-            //     $teamFigcaption.on({
-            //         focus : function(){
-            //             alert('ddd');
-            //         }
-            //     })
 
         // datepicker, timepicker
         $("#reserveDate").datepicker({});

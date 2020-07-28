@@ -9,6 +9,12 @@ header nav {z-index: 9999;}
 header nav ul {padding: 74px 0 0 214px;}
 header nav ul li {margin-right: 49px;}
 
+
+/* skip--menu__accessbility */
+.skip--menu{position: absolute; width:1530px; height:40px; z-index:9999;}
+.skip--menu ul li{position:absolute; top:0; left:0; width: 100%; height:100%; text-align:center;}
+.skip--menu ul li a{display: inline-block; width: 100%; height:100%; background: gray; color:#fff; font-weight: bold; line-height:2em;}
+
 /* 1. section--banner */
 .section--banner {padding-top:190px; background: url(../images/bg_01.png)no-repeat left bottom; background-size: 239px 533px;}
 .section--banner .inner {text-align: left;}
@@ -61,9 +67,10 @@ header nav ul li {margin-right: 49px;}
 .section--testimonials .indicator--item .executive--name {display: inline-block; margin-top: 24px; font-size: 15px; font-weight: 400; line-height: 2em; color: #263a41;}
 .section--testimonials .indicator--item .executive--name em {font-family: 'Rufina', serif; font-size: 22px; font-weight: 400;}
 .section--testimonials .slider__indicator--btn {display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 137px; left: 50%; width: 85px; transform: translateX(-50%);}
-.section--testimonials .slider__indicator--btn li {width: 10px; height: 10px; border-radius: 50%; background-color: #ffc3c2; cursor: pointer;}
-.section--testimonials .slider__indicator--btn li a{overflow: hidden; display: block; width:10px; height:10px; text-indent: -9999px;}
-.section--testimonials .slider__indicator--btn .indicator--on {background-color: #ff817e; transition: .3s;}
+.section--testimonials .slider__indicator--btn li {overflow: hidden; position: relative; width: 10px; height: 10px;}
+/* .section--testimonials .slider__indicator--btn li a{overflow: hidden; width:10px; height:10px; text-indent: -9999px;} */
+.section--testimonials .slider__indicator--btn li button {position:absolute; width:100%; height:100%; background-color:#ffc3c2; border-radius: 50%; cursor: pointer;}
+.section--testimonials .slider__indicator--btn .indicator--on button {background-color: #ff817e; transition: .3s;}
 .section--testimonials .slider__arrow {display: flex;align-items: center;width:100%;height:100%;}
 
 .section--testimonials .slider__arrow--inner {width: 1200px; margin: 0 auto; z-index: 9999;}
