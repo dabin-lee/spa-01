@@ -1,14 +1,32 @@
 $(function(){
-    // section--team
-    var $maNagerLi = $('.tiles > li'),
-        $maNagerProfile = $maNagerLi.find(' > figcaption'),
-        $snsBtn = $maNagerProfile.find('.btn__sns'),
-        $tabList = $('#tablist'),
-        $tabLi = $('.tab'),
-        $Tab = $tabList.find('> a'),
-        $z_idx = 0;
 
-    console.log($Tab);
+
+
+    // skip--nav
+        var skipNav = $('.skip--menu'),
+            skipNavli = skipNav.find(' > ul > li '),
+            skipNavv = skipNavli.find('> a');
+
+    function skip(){
+        skipNavv.on({
+            focus : function(){
+                $(this).parents($('.skip--menu > ul > li')).css({top:0});
+            }
+        });
+        skipNavv.on({
+            focusout : function(){
+                $('.skip--menu > ul > li').css({top:-100 + '%'});
+            }
+        });
+        }
+        skip();
+
+    // section--team
+    var $maNagerLi = $('.tiles > li.manager--profile'),
+        $maNagerProfile = $maNagerLi.find(' > figcaption'),
+        $tabList = $('#tablist'),
+        $Tab = $tabList.find('> a');
+
         // 마우스 오버, 포커스 인
         $maNagerLi.on({
             mouseenter:	function(){
@@ -21,46 +39,27 @@ $(function(){
                 $Tab.focus()
             }
         });
-        $snsBtn.on({
-            focus:	function(){
-                $Tab.focus()
-            }
-        });
 
         // 마우스 리브 , 포커스 리브
         $maNagerLi.on({
             mouseleave:	function(){
                 $(this).removeClass('on');
-                $(this).find('.tablist > li > a').attr('tabindex', 0);
+                $(this).find('#tablist > li > a').attr('tabindex', 0);
             }
         });
 
-        $snsBtn.on({
-            blur:	function(){
-                $(this).removeClass('on');
-            }
-        });
-
-
-        $maNagerLi.on({
-            focusout:	function(){
-                $(this).removeClass('on');
-                $(this).find('.tablist > li > a').attr('tabindex', 0);
-            }
-        });
-
-
-
-        $maNagerLi.on({
-            blur:	function(){
-                $Tab.focus(function(){
-                    alert('dadz');
-                    $(this).last().focus();
-                    $('.manager--profile').removeClass('on');
-                });
-            },
-        });
-
+        // article > a 에 focus가 될 때
+        var $off_SnsBtn = $('.off');
+        $off_SnsBtn.on("focusout", function(){
+			var	_this = $(this),
+                    _thisLi = _this.closest('li.manager--profile'); //가까운 li가
+                    console.log($off_SnsBtn);
+			if(_thisLi.hasClass('on') == true ){
+				_thisLi.removeClass('on');
+			}else{
+				_thisLi.addClass('on');
+			}
+		});
 
     // section--testimonials
         var cnt = 0,
@@ -107,6 +106,9 @@ $(function(){
                 var ind_ = $(this).index();
                 $(this).on({
                     click : function(){
+						cnt = ind_;
+                        goToslide();
+                    },focusin : function(){
 						cnt = ind_;
                         goToslide();
                     }
