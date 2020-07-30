@@ -21,7 +21,7 @@ $(function(){
     // section--team
     var $maNagerLi = $('.tiles > li.manager--profile'),
         $maNagerProfile = $maNagerLi.find(' > figcaption'),
-        $tabList = $('#tablist'),
+        $tabList = $('.tablist'),
         $Tab = $tabList.find('> a');
 
         // 마우스 오버, 포커스 인

@@ -86,8 +86,6 @@ header nav ul li {margin-right: 49px;}
 .section--team .team__cont .on .btn__sns {opacity: 1; margin-top: 12px;}
 
 /* tiles hover */
-.section--team .team__cont .on figcaption strong {margin-top: 38px;}
-.section--team .team__cont .on figcaption .btn__sns {margin-bottom: 27px;}
 .section--team .team__cont .on .btn__sns ul {display: inline-block;}
 .section--team .team__cont .on .btn__sns li {float: left; margin-right: 42px;}
 .section--team .team__cont .on .btn__sns li:last-child {margin-right: 0;}
