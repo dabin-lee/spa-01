@@ -1,4 +1,24 @@
-;(function($,window,document,undefined){
+$(function(){
+
+    // skip--nav
+        var skipNav = $('.skip--menu'),
+            skipNavli = skipNav.find(' > ul > li '),
+            skipNavv = skipNavli.find('> a');
+
+        function skip(){
+            skipNavv.on({
+                focus : function(){
+                    $(this).parents($('.skip--menu > ul > li')).css({top:0});
+                }
+            });
+            skipNavv.on({
+                focusout : function(){
+                    $('.skip--menu > ul > li').css({top:-100 + '%'});
+                }
+            });
+            }
+            skip();
+
     // section--team
     var $maNagerLi = $('.tiles > li.manager--profile'),
         $maNagerProfile = $maNagerLi.find(' > figcaption'),
@@ -49,13 +69,7 @@
             $arrowBox = $('.slide__wrap'),
             $prevArrow = $arrowBox.find('.arrow--prevBtn'),
             $nextArrow = $arrowBox.find('.arrow--nextBtn'),
-            $inDicatorBtn = $('.indicator--btn'),
-
-            $rollIngSlide = ('.slider__rolling--btn'),
-            $playBtnList = ('.rolling--btn > button'),
-            $playPauseBtn = ('.slide__play'),
-            $rolcnt = 0,
-            $pause = 0;
+            $inDicatorBtn = $('.indicator--btn');
 
             //main slide
             function goToslide(){
@@ -93,35 +107,17 @@
 						cnt = ind_;
                         goToslide();
                     }
+                    ,focusin : function(){
+						cnt = ind_;
+                        goToslide();
+                    }
                 })
             });
-
-
-            // 플레이, 정지 Rolling
-            function rollingSlide(){
-                $playPauseBtn.on({
-                    click : function(){
-                        $(this).addClass('addClassPlayPause').html('Stop');
-                    }
-                });
-            }
-
-            rollingSlide();
-
-            // function ： 플레이 누르면 자동 롤링 + 버튼 이미지 변경 + 인디게이터 같이 /  다시 누르면 멈춤 + 버튼 이미지 변경
-
-
-
-
-
-
-
 
             //슬라이드 pre, nex / btn
             function prevSlide(){
                 cnt--;
                 goToslide();
-
             }
             function nextSlide(){
                 cnt++;
@@ -153,4 +149,4 @@
             scrollbar: true
         });
 
-})(jQuery,window,document);
+});

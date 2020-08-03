@@ -15,6 +15,8 @@
 
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 
@@ -82,7 +84,7 @@
                 <section>
                     <div class="section--feature">
                         <!-- <div class="inner"> -->
-                            <div class="feature__cont">
+                            <div class="feature--inner feature__cont">
                                 <ul>
                                     <li class="feature__block"><span>Body Treatment</span></li>
                                     <li><span>Body Treatment</span></li>
@@ -90,8 +92,8 @@
                                     <li><span>Body Treatment</span></li>
                                 </ul>
                             </div>
-                        </div>
-                    <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
                 </section><!-- //Feature -->
 
                 <section>
@@ -194,10 +196,21 @@
                             <li class="indicator--btn"><button type="button" class="pageBtn"><span>pagebutton</span></button></li>
                             <li class="indicator--btn"><button type="button" class="pageBtn"><span>pagebutton</span></button></li>
                         </ul>
+
+                        <!-- play_stop Btn list -->
+                        <ul class="slider__rolling--btn">
+                            <li class="rolling--play"><button type="button" class="slide__play"><span>play</span></button></li>
+                            <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling1</span></button></li>
+                            <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling2</span></button></li>
+                            <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling3</span></button></li>
+                            <li class="rolling--btn"><button type="button" class="rollingBtn"><span>rolling4</span></button></li>
+                        </ul>
+
+                        <!-- prev, next Btn -->
                         <div class="slider__arrow">
                             <div class="slide__wrap slider__arrow--inner">
-                                <span><a href="javascript:" role="button" class="arrow--prevBtn">Prevbutton</a></span>
-                                <span><a href="javascript:" role="button" class="arrow--nextBtn">NextButton</a></span>
+                                <a href="javascript:" role="button" class="arrow--prevBtn"><span>Prevbutton</span></a>
+                                <a href="javascript:" role="button" class="arrow--nextBtn"><span>NextButton</span></a>
                             </div>
                         </div>
                     </div>
