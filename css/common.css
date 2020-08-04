@@ -39,10 +39,10 @@ header .inner, section .inner {max-width:1140px; height:auto; margin: 0 auto; te
 .tiles article:hover .btn__primary { transition: .3s; background: #ff817e;}
 .tiles article .summary--img {width: 320px; height:264px; background: #999;}
 .tiles article .summary--img img {max-width: 100%; box-sizing: border-box;}
-.tiles article h3, .tiles figcaption strong {display:inline-block; font-family: 'Rufina', serif; font-size:22px; font-weight: 700; line-height: 2em;}
+.tiles article h3, .tiles figcaption h3 {display:inline-block; font-family: 'Rufina', serif; font-size:22px; font-weight: 700; line-height: 2em;}
 .tiles article p, .tiles figcaption p {font-size: 14px; line-height: 2em; color:#999;}
 .tiles article button {margin-top: 30px;}
-.tiles figcaption strong {margin-top: 28px;}
+.tiles figcaption h3 {margin-top: 28px;}
 
 
 /* nav - hover */

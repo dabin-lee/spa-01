@@ -7,15 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
-    <link rel="stylesheet" href="css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <link rel="stylesheet" href="./css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="./css/common.css" type="text/css" />
     <!-- <link rel="stylesheet" href="css/timepick.css" type="text/css" /> -->
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 
-    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <!-- <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
@@ -37,11 +39,11 @@
                 </h1>
                 <nav>
                     <ul id="gnb" class="nav--bar">
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">FEATURE</a></li>
-                        <li><a href="">SERVICE</a></li>
-                        <li><a href="">CONTACT</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">FEATURE</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="#">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -74,7 +76,7 @@
                             <div class="title">
                                 <span>About our spa center</span>
                                 <h2>Come and you will be Inspired!</h2>
-                                <p>It’s the end of summer the sweltering heat makes human sweat in the night and makes the plants and trees wilt even in the moonlit nights. The eastern wind breeze brings an eerie feeling, that the monsoon clouds are soon coming, there is a strange silence in the ears, the skygets darker and darker</p>
+                                <p>Itâ€™s the end of summer the sweltering heat makes human sweat in the night and makes the plants and trees wilt even in the moonlit nights. The eastern wind breeze brings an eerie feeling, that the monsoon clouds are soon coming, there is a strange silence in the ears, the skygets darker and darker</p>
                             </div>
                             <button type="button" class="btn__primary--pink"><span>READ MORE</span></button>
                         </div>
@@ -108,8 +110,9 @@
                                     <div class="article__service-tiles">
                                         <div class="summary--img">
                                             <img src="./images/">
+                                            <!-- alt값은 아래 h3 -->
                                         </div>
-                                        <strong>Massage Therapy</strong>
+                                        <h3>Massage Therapy</h3>
                                         <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
                                         <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
                                     </div>
@@ -119,7 +122,7 @@
                                         <div class="summary--img">
                                             <img src="./images/">
                                         </div>
-                                        <strong>Massage Therapy</strong>
+                                        <h3>Massage Therapy</h3>
                                         <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
                                         <button type="button" class="btn__primary"><span>READ MORE</span></button>
                                     </div>
@@ -129,7 +132,7 @@
                                         <div class="summary--img">
                                             <img src="./images/">
                                         </div>
-                                        <strong>Massage Therapy</strong>
+                                        <h3>Massage Therapy</h3>
                                         <p>Living winged said you darkness you're dividegathered and bring one seasons facegreat dr Waters firmament place which.</p>
                                         <button type="button" class="btn__primary tiles__list--btn"><span>READ MORE</span></button>
                                     </div>
@@ -209,8 +212,12 @@
                         <!-- prev, next Btn -->
                         <div class="slider__arrow">
                             <div class="slide__wrap slider__arrow--inner">
+
                                 <a href="javascript:" role="button" class="arrow--prevBtn"><span>Prevbutton</span></a>
                                 <a href="javascript:" role="button" class="arrow--nextBtn"><span>NextButton</span></a>
+
+                                <!-- <button type="button" class="arrow--prevBtn"><span>Prevbutton</span></button>
+                                <button type="button" class="arrow--nextBtn"><span>NextButton</span></button> -->
                             </div>
                         </div>
                     </div>
@@ -227,16 +234,15 @@
                                 <ul class="tiles">
                                     <li class="manager--profile" tabindex="0">
                                         <figure><img src=""></figure>
-                                        <!-- ??? ?? figcaption??? alt? ???? -->
                                         <figcaption>
-                                            <strong>Joseph Austin</strong>
+                                            <h3>Joseph Austin</h3>
                                             <p>Thai Message</p>
                                             <div class="btn__sns">
                                                 <ul class="tablist" role="tablist">
-                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" role="button" target="brank" title="go to new window"><span>facebook</span></a></li>
-                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" role="button" target="brank" title="go to new window"><span>twitter</span></a></li>
-                                                    <li class="google" role="tab"><a href="https://www.google.com" role="button" target="brank" title="go to new window"><span>google</span></a></li>
-                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" role="button" target="brank" title="go to new window"><span>instagram</span></a></li>
+                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" role="button" target="_brank" title="facebook 사이트 새창열림"><span>facebook</span></a></li>
+                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" role="button" target="_brank" title="twitter 사이트 새창열림"><span>twitter</span></a></li>
+                                                    <li class="google" role="tab"><a href="https://www.google.com" role="button" target="_brank" title="google 사이트 새창열림"><span>google</span></a></li>
+                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" role="button" target="_brank" title="instagram 사이트 새창열림"><span>instagram</span></a></li>
                                                 </ul>
                                             </div>
                                         </figcaption>
@@ -244,14 +250,14 @@
                                     <li class="manager--profile" tabindex="0">
                                         <figure><img src=""></figure>
                                         <figcaption>
-                                            <strong>David Hannan</strong>
+                                            <h3>Dabin Hannan</h3>
                                             <p>Thai Message</p>
                                             <div class="btn__sns">
                                                 <ul class="tablist" role="tablist">
-                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" class="tab" role="button" target="brank" title="go to new window">facebook</a></li>
-                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" class="tab" role="button" target="brank" title="go to new window">twitter</a></li>
-                                                    <li class="google" role="tab"><a href="https://www.google.com" class="tab" role="button" target="brank" title="go to new window">google</a></li>
-                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" class="tab" role="button" target="brank" title="go to new window">instagram</a></li>
+                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" role="button" target="_brank" title="facebook 사이트 새창열림"><span>facebook</span></a></li>
+                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" role="button" target="_brank" title="twitter 사이트 새창열림"><span>twitter</span></a></li>
+                                                    <li class="google" role="tab"><a href="https://www.google.com" role="button" target="_brank" title="google 사이트 새창열림"><span>google</span></a></li>
+                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" role="button" target="_brank" title="instagram 사이트 새창열림"><span>instagram</span></a></li>
                                                 </ul>
                                             </div>
                                         </figcaption>
@@ -259,14 +265,14 @@
                                     <li class="manager--profile" tabindex="0">
                                         <figure><img src=""></figure>
                                         <figcaption>
-                                            <strong>Cheryl Harris</strong>
+                                            <h3>Cheryl Harris</h3>
                                             <p>Thai Message</p>
                                             <div class="btn__sns">
                                                 <ul class="tablist" role="tablist">
-                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" role="button" target="brank" title="go to new window">facebook</a></li>
-                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" role="button" target="brank" title="go to new window">twitter</a></li>
-                                                    <li class="google" role="tab"><a href="https://www.google.com" role="button" target="brank" title="go to new window">google</a></li>
-                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" role="button" target="brank" title="go to new window">instagram</a></li>
+                                                    <li class="facebook" role="tab"><a href="https://www.facebook.com" role="button" target="_brank" title="facebook 사이트 새창열림"><span>facebook</span></a></li>
+                                                    <li class="twitter" role="tab"><a href="https://www.twitter.com" role="button" target="_brank" title="twitter 사이트 새창열림"><span>twitter</span></a></li>
+                                                    <li class="google" role="tab"><a href="https://www.google.com" role="button" target="_brank" title="google 사이트 새창열림"><span>google</span></a></li>
+                                                    <li class="instagram off" role="tab"><a href="https://www.instagram.com" role="button" target="_brank" title="instagram 사이트 새창열림"><span>instagram</span></a></li>
                                                 </ul>
                                             </div>
                                         </figcaption>
@@ -368,15 +374,15 @@
                             <div class="contact__cont">
                                 <ul class="visit--info">
                                     <li>
-                                        <span></span>
+                                        <h3>address</h3>
                                         <p>848 E 28th ST, BROOKLYN <br>NEW YORK, USa</p>
                                     </li>
                                     <li>
-                                        <span></span>
-                                        <p>example@leospa.com <br>example@leospa.com </p>
+                                        <h3>e-mail</h3>
+                                        <p><a href="#" href="example@leospa.com" class="email" title="이메일 전송 열기">example@leospa.com<br>example@leospa.com</a></p>
                                     </li>
                                     <li>
-                                        <span></span>
+                                        <h3>phnoe number</h3>
                                         <p>+02 365 2365 3265 (02) <br> +01 365 2365 3265 (04) </p>
                                     </li>
                                 </ul>
@@ -410,29 +416,29 @@
                     </div>
                     <div class="footer__list--sns">
                         <ul class="footer--sns__type01">
-                            <li class="facebook"><a href="https://www.facebook.com" target="brank" title="go to new window">facebook</a></li>
-                            <li class="twitter"><a href="https://www.twitter.com" target="brank" title="go to new window">twitter</a></li>
-                            <li class="instagram"><a href="https://www.instagram.com" target="brank" title="go to new window">instagram</a></li>
-                            <li class="vingle"><a href="https://careers.vingle.net" target="brank" title="go to new window">vingle</a></li>
+                            <li class="facebook"><a href="https://www.facebook.com" target="_brank" title="facebook 사이트 새창열림">facebook</a></li>
+                            <li class="twitter"><a href="https://www.twitter.com" target="_brank" title="twitter 사이트 새창열림">twitter</a></li>
+                            <li class="instagram"><a href="https://www.instagram.com" target="_brank" title="instagram 사이트 새창열림">instagram</a></li>
+                            <li class="vingle"><a href="https://careers.vingle.net" target="_brank" title="vingle 사이트 새창열림">vingle</a></li>
                         </ul>
                         <ul class="footer--sns__type02">
-                            <li class="facebook"><a href="https://www.facebook.com" target="brank" title="go to new window">facebook</a></li>
-                            <li class="twitter"><a href="https://www.twitter.com" target="brank" title="go to new window">twitter</a></li>
-                            <li class="instagram"><a href="https://www.instagram.com" target="brank" title="go to new window">instagram</a></li>
-                            <li class="vingle"><a href="https://careers.vingle.net" target="brank" title="go to new window">vingle</a></li>
+                            <li class="facebook"><a href="https://www.facebook.com" target="_brank" title="facebook 사이트 새창열림">facebook</a></li>
+                            <li class="twitter"><a href="https://www.twitter.com" target="_brank" title="twitter 사이트 새창열림">twitter</a></li>
+                            <li class="instagram"><a href="https://www.instagram.com" target="_brank" title="instagram 사이트 새창열림">instagram</a></li>
+                            <li class="vingle"><a href="https://careers.vingle.net" target="_brank" title="vingle 사이트 새창열림">vingle</a></li>
                         </ul>
                         <ul class="footer--sns__type03">
-                            <li class="facebook"><a href="https://www.facebook.com" target="brank" title="go to new window">facebook</a></li>
-                            <li class="twitter"><a href="https://www.twitter.com" target="brank" title="go to new window">twitter</a></li>
-                            <li class="instagram"><a href="https://www.instagram.com" target="brank" title="go to new window">instagram</a></li>
-                            <li class="vingle"><a href="https://careers.vingle.net" target="brank" title="go to new window">vingle</a></li>
+                            <li class="facebook"><a href="https://www.facebook.com" target="_brank" title="facebook 사이트 새창열림">facebook</a></li>
+                            <li class="twitter"><a href="https://www.twitter.com" target="_brank" title="twitter 사이트 새창열림">twitter</a></li>
+                            <li class="instagram"><a href="https://www.instagram.com" target="_brank" title="instagram 사이트 새창열림">instagram</a></li>
+                            <li class="vingle"><a href="https://careers.vingle.net" target="_brank" title="vingle 사이트 새창열림">vingle</a></li>
                         </ul>
                     </div>
-                    <p>© COPYRIGHT 2019 <em>themeies.com.</em>ALL RIGHTS RESERVED.</p>
+                    <p><small>Â© COPYRIGHT 2019 <em>themeies.com.</em>ALL RIGHTS RESERVED.</small></p>
                 </div>
             </div>
         </footer>
     </div>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="./js/script3.js"></script>
 </body>
 </html>

@@ -20,6 +20,10 @@ label,img,input,select,textarea,button {
 	outline: none;
 }
 
+button{
+	background-color : transparent;
+}
+
 button:focus, a:focus, input:focus, select:focus, li:focus { outline:solid 1px #dddd;}
 button:focus { border: 1px solid #ddd;}
 
