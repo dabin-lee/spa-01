@@ -43,6 +43,8 @@ header .inner, section .inner {max-width:1140px; height:auto; margin: 0 auto; te
 .tiles article p, .tiles figcaption p {font-size: 14px; line-height: 2em; color:#999;}
 .tiles article button {margin-top: 30px;}
 .tiles figcaption h3 {margin-top: 28px;}
+.tiles img{width:100%; height:100%; object-fit: cover;}
+
 
 
 /* nav - hover */

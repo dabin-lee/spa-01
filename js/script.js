@@ -1,9 +1,10 @@
-;(function(){
+$(function(){
     // section--team
     var $maNagerLi = $('.tiles > li.manager--profile'),
         $maNagerProfile = $maNagerLi.find(' > figcaption'),
         $tabList = $('.tablist'),
         $Tab = $tabList.find('> a');
+
         // 마우스 오버, 포커스 인
         $maNagerLi.on({
             mouseenter:	function(){
@@ -50,6 +51,14 @@
             $nextArrow = $arrowBox.find('.arrow--nextBtn'),
             $inDicatorBtn = $('.indicator--btn');
 
+        var $pause = 0,
+            $setId = 0,
+            $rollBtnwrp = $('.slider__rolling--btn'),
+            $rollBtnList = $rollBtnwrp.find('> .rolling--btn'),
+            $rollBtnIndicator = $('.rolling--btn'),
+            $rollBtnPlay = $('.rolling--play');
+
+
             //main slide
             function goToslide(){
                 // console.log(cnt);
@@ -63,7 +72,8 @@
 
                     $slideGroup.stop().animate({left: (- 100 * cnt) + '%'}, $duration, $easing);
                     $inDicatorBtn.eq(cnt).addClass('indicator--on').siblings().removeClass('indicator--on');
-                    // $playBtnList.eq(cnt).addClass('addClassPlayPause').siblings().removeClass('addClassPlayPause');
+                    $rollBtnIndicator.eq(cnt).addClass('addClassBtn').siblings().removeClass('addClassBtn');
+
                 }
                 goToslide();
 
@@ -113,34 +123,94 @@
             })
 
 
-            //////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////
 
-
-
-            // 플레이, 정지 Rolling
-            function rollingSlide(){
-                if($pause == 0 ){
-                    pause =1 ;
-
+        // 플레이인디게이터 버튼 클릭
+        $rollBtnList.each(function(e){
+            var rol = $(this).index();
+            $(this).on({
+                click : function(){
+                    $(this).addClass('addClassBtn').siblings().removeClass('addClassBtn');
+                    cnt = rol-1;
+                    goToslide();
                 }
+
+            })
+        });
+
+
+        // playFn
+        function rollingPlayFn(){
+            $setId = setInterval(nextSlide, 2000);
+            $rollBtnPlay.removeClass('addClassPlayPause').find('span').html('Play');
+        }
+
+
+        // pauseFn
+        function rollingPauseFn(){
+            clearInterval($setId);
+            $rollBtnPlay.addClass('addClassPlayPause').find('span').html('Stop');
+        }
+
+
+        // autoTimer
+        function autoPlayFn(){
+            goToslide();
+            rollingPlayFn()
+        }
+        autoPlayFn();
+
+
+
+        // stop - 버튼
+        $rollBtnPlay.on({
+            click : function(){
+                rollIngBtn();
+            }
+        });
+
+
+
+        //플레이, 일시중지 버튼
+        function rollIngBtn(){
+            if( $pause == 0 ){ //play일때
+                $pause = 1; //일시중지
+                rollingPauseFn();
+            }else{
+                $pause = 0; //stop
+                rollingPlayFn();
+            }
+        }
+
+
+
+/*
+        //////////////////////////////////////////
+        // [objectfix IE]
+        var $w = $('.summary--img'),
+            $t = $('.summary--img > img'), // 이미지 태그
+            $p = $t.parent(), // 부모 컨테이너
+            $s = 'url(' + $t.attr('src') + ')', // 이미지 태그의 src를 가져옴.
+            $d = $('<div class="backGround"></div>'); // div를 하나 만듦.
+
+            function forIEset(){
+                $t.hide(); //이미지는 숨기고.
+                $p.append($d); //부모div에 생성한 div를 붙임.
+                $d.css({
+                'height'                : 100 + '%',
+                'background-size'       : 'cover',
+                'background-repeat'     : 'no-repeat',
+                'background-position'   : 'center',
+                // 'background-image'      : $s
+                });
             }
 
-            rollingSlide();
-
-            // function ： 플레이 누르면 자동 롤링 + 버튼 이미지 변경 + 인디게이터 같이 /  다시 누르면 멈춤 + 버튼 이미지 변경
-
-
-            $playPauseBtn.on({
-                click : function(){
-                    $(this).addClass('addClassPlayPause').html('Stop');
-                }
+            $w.each(function(){
+                $(this).css({'overflow' : 'hidden'})
+                forIEset();
             });
-
-
-
-
-            //////////////////////////////////////////////////////////
-
+        //////////////////////////////////////////
+*/
 
         // datepicker, timepicker
         $("#reserveDate").datepicker({});
@@ -155,5 +225,4 @@
             dropdown: true,
             scrollbar: true
         });
-
-    });
+});

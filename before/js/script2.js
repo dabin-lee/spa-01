@@ -1,106 +1,138 @@
 $(function(){
-    // section--team
-    var $maNager = $('.manager--profile');
-        $maNager.on({
-            mouseenter : function(){
-                if($(this).hasClass('over') == true){
-                    $maNager.removeClass('over');
-                }else{
-                    $(this).addClass('over');
+
+    // skip--nav
+        var skipNav = $('.skip--menu'),
+            skipNavli = skipNav.find(' > ul > li '),
+            skipNavv = skipNavli.find('> a');
+
+        function skip(){
+            skipNavv.on({
+                focus : function(){
+                    $(this).parents($('.skip--menu > ul > li')).css({top:0});
                 }
-            },mouseleave: function(){
-                $maNager.removeClass('over');
+            });
+            skipNavv.on({
+                focusout : function(){
+                    $('.skip--menu > ul > li').css({top:-100 + '%'});
+                }
+            });
+            }
+            skip();
+
+    // section--team
+    var $maNagerLi = $('.tiles > li.manager--profile'),
+        $maNagerProfile = $maNagerLi.find(' > figcaption'),
+        $tabList = $('.tablist'),
+        $Tab = $tabList.find('> a');
+
+        // 마우스 오버, 포커스 인
+        $maNagerLi.on({
+            mouseenter:	function(){
+                $(this).addClass('on');
+                $Tab.focus()
+                $tabList.find('li').eq().attr('tabIndex', 0);
+            },
+            focus:	function(){  //키보드접근 focusin == focus    커보드 떠날 때 focusout == blur
+                $(this).addClass('on');
+                $Tab.focus();
             }
         });
 
+        // 마우스 리브 , 포커스 리브
+        $maNagerLi.on({
+            mouseleave:	function(){
+                $(this).removeClass('on');
+                $(this).find('#tablist > li > a').attr('tabindex', 0);
+            }
+        });
 
+        // article > a 에 focus가 될 때
+        var $off_SnsBtn = $('.off');
+        $off_SnsBtn.on("focusout", function(){
+			var	_this = $(this),
+                    _thisLi = _this.closest('li.manager--profile'); //가까운 li가
+                    console.log($off_SnsBtn);
+			if(_thisLi.hasClass('on') == true ){
+				_thisLi.removeClass('on');
+			}else{
+				_thisLi.addClass('on');
+			}
+		});
 
     // section--testimonials
-        // arrow
-        var cnt = 0,
-            $arrowBox = $('.slide__wrap'),
-            $prevArrow = $arrowBox.find('.arrow--prevBtn'),
-            $nextArrow = $arrowBox.find('.arrow--nextBtn'),
-            $inDicatorBtn = $('.indicator--btn');
-
         var cnt = 0,
             idx = 0,
             $slideGroup = $('.article__group--testimonials'),
             $slides = $slideGroup.find('> .indicator--article'),
             $duration = 500,
-            $easing = 'easeInOutExpo';
+            $easing = 'easeInOutExpo',
+            $arrowBox = $('.slide__wrap'),
+            $prevArrow = $arrowBox.find('.arrow--prevBtn'),
+            $nextArrow = $arrowBox.find('.arrow--nextBtn'),
+            $inDicatorBtn = $('.indicator--btn');
 
-            // function goToslide(idx){
-            //         $slides.each(function(i){ // 각각 slide마다 css로 left값 바꿈
-            //             cnt = i;
-            //             var newLeft = (i * 100) + '%';
-            //             $(this).css({left: newLeft},0, function(){
-            //                 if(cnt > 4){cnt = 0;}
-            //                 if(cnt < 0){cnt = 4;}
-            //             });
-            //         });
-            //         $currentIndex = idx;
-            //         $slideGroup.stop().animate({left: (- 100 * idx) + '%'},$duration, $easing);
-            //         $inDicatorBtn.eq(idx).addClass('indicator--on').siblings().removeClass('indicator--on');
-            //     }
-            //     goToslide();
-            //     console.log(goToslide);
-
+            //main slide
             function goToslide(){
-                $slides.each(function(i){
-                    idx = i;
-                    var newLeft = (i * 100) + '%';
-                    $(this).css({left: newLeft},0);
-                });
-                $slideGroup.animate({left: (- 100 * cnt) + '%'},$duration, $easing,function(){
-                    if(cnt > 3){cnt = 0;}
-                    if(cnt < 0){cnt = 3;}
-                });
-                $inDicatorBtn.eq(cnt).addClass('indicator--on').siblings().removeClass('indicator--on');
-            }
-            goToslide();
+                // console.log(cnt);
+                curChk();
 
-            // console.log($slides.length);
+                    $slides.each(function(i){ // 각각 slide마다 css로 left값 바꿈
+                        idx = i;
+                        var newLeft = (i * 100) + '%';
+                        $(this).css({left: newLeft});
+                    });
 
-            $inDicatorBtn.each(function(){
-                var ind_ = $(this).index() ;
+                    $slideGroup.stop().animate({left: (- 100 * cnt) + '%'}, $duration, $easing);
+                    $inDicatorBtn.eq(cnt).addClass('indicator--on').siblings().removeClass('indicator--on');
+                }
+                goToslide();
+
+
+            //슬라이드 길이 조절
+            function curChk(){
+                // cnt >= $slides.length ? cnt = 0 : cnt = $slides.length-1
+
+				if(cnt >= $slides.length){  // 슬라이드 길이보다 더 높을 때
+					cnt = 0;
+				}else if(cnt < 0){ // 0 보다 작을때
+					cnt = $slides.length-1;
+				}
+			}
+
+            //각각의 인디게이터
+            $inDicatorBtn.each(function(e){
+                var ind_ = $(this).index();
                 $(this).on({
                     click : function(){
+						cnt = ind_;
+                        goToslide();
+                    }
+                    ,focusin : function(){
+						cnt = ind_;
                         goToslide();
                     }
                 })
             });
 
-            function prevCount(){
+            //슬라이드 pre, nex / btn
+            function prevSlide(){
                 cnt--;
                 goToslide();
             }
-            function nextCount(){
+            function nextSlide(){
                 cnt++;
                 goToslide();
             }
-            // function autoPlay(){
-            //     setId = setInterval(nextCount, 3000);
-            // }
-            // autoPlay();
-
             $prevArrow.on({
                 click : function(){
-                    // if(!$slideGroup.is(':animate')){
-                    //     prevCount();
-                    // }
-                    prevCount();
+                    prevSlide();
                 }
-            });
-
+            })
             $nextArrow.on({
                 click : function(){
-                    // if(!$slideGroup.is(':animate')){
-                    //     nextCount();
-                    // }
-                    nextCount();
+                    nextSlide();
                 }
-            });
+            })
 
 
         // datepicker, timepicker
@@ -117,4 +149,4 @@ $(function(){
             scrollbar: true
         });
 
-    });
+});
